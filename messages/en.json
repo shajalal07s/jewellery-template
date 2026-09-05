@@ -1,0 +1,1020 @@
+{
+  "Meta": {
+    "title": "Fashion Store",
+    "description": "Bangladesh's fashionable online fashion store — shop the latest trends with quality apparel, fast delivery and unbeatable prices.",
+    "keywords": "fashion, clothing, e-commerce, store, online shopping, Bangladesh, fashion store"
+  },
+  "Common": {
+    "siteName": "Fashion Store",
+    "backToHome": "Back to Home",
+    "somethingWentWrong": "Something went wrong"
+  },
+  "LanguageSwitcher": {
+    "label": "Language",
+    "english": "English",
+    "bangla": "বাংলা"
+  },
+  "Search": {
+    "title": "AI Powered Search",
+    "badge": "AI",
+    "subtitle": "Smart search across every product in our catalog.",
+    "placeholder": "Search for kurti, panjabi, sharee...",
+    "button": "Search",
+    "popular": "Popular Searches",
+    "thinking": "AI is thinking...",
+    "suggestions": "AI Suggestions",
+    "noResults": "No matches found. Try a different keyword.",
+    "note": "Powered by Fashion Store AI",
+    "categories": [
+      "Kurti",
+      "Panjabi",
+      "Sharee",
+      "Salwar Kameez",
+      "Hijab",
+      "Lehenga"
+    ]
+  },
+  "Wishlist": {
+    "title": "Wishlist",
+    "itemCount": "{count, plural, =1 {1 item} other {# items}}",
+    "emptyTitle": "Your wishlist is empty",
+    "emptyDescription": "Tap the heart on any product to save it here.",
+    "viewWishlist": "View Wishlist",
+    "remove": "Remove from wishlist"
+  },
+  "CartHover": {
+    "title": "Your Cart",
+    "itemCount": "{count, plural, =1 {1 item} other {# items}}",
+    "emptyTitle": "Your cart is empty",
+    "emptyDescription": "Add some amazing pieces to get started.",
+    "subtotal": "Subtotal",
+    "viewCart": "View Cart",
+    "checkout": "Checkout",
+    "remove": "Remove item"
+  },
+  "AccountMenu": {
+    "title": "Account",
+    "guestGreeting": "Welcome to Fashion Store",
+    "guest": "Guest",
+    "signIn": "Sign In",
+    "createAccount": "Create Account",
+    "dashboard": "Dashboard",
+    "profile": "Profile",
+    "signOut": "Sign Out",
+    "hello": "Hello, {name}"
+  },
+  "WishlistPage": {
+    "title": "My Wishlist",
+    "itemCount": "{count, plural, =1 {1 item} other {# items}}",
+    "emptyTitle": "No items saved yet",
+    "emptyDescription": "Products you save to your wishlist will appear here.",
+      "browseProducts": "Browse Products",
+      "remove": "Remove"
+    },
+    "Contact": {
+    "title": "Contact Us",
+    "subtitle": "We'd love to hear from you. Reach out and our team will get back to you soon.",
+    "metaTitle": "Contact",
+    "metaDescription": "Get in touch with Fashion Store — we're here to help.",
+    "heroBadge": "We're here to help",
+    "heroTitle": "Let's Start a Conversation",
+    "heroSubtitle": "Questions, feedback, or partnership inquiries — our friendly team is always ready to assist you.",
+    "info": {
+      "address": { "label": "Address", "value": "House 12, Road 5, Dhanmondi, Dhaka 1205, Bangladesh" },
+      "phone": { "label": "Phone", "value": "+880 1712-345678" },
+      "email": { "label": "Email", "value": "support@fashionstore.com.bd" },
+      "hours": { "label": "Working Hours", "value": "Sat – Thu, 9:00 AM – 9:00 PM" }
+    },
+    "infoTitle": "Contact Information",
+    "infoSubtitle": "Reach us through any channel below and we'll respond within 24 hours.",
+    "faqTitle": "Frequently Asked Questions",
+    "faqSubtitle": "Quick answers to the questions we hear most often.",
+    "faqs": [
+      { "question": "How long does delivery take?", "answer": "Standard delivery takes 2-4 business days across Bangladesh. Express delivery reaches you within 24-48 hours in major cities." },
+      { "question": "What is your return policy?", "answer": "We offer a hassle-free 7-day return policy on all unworn items with tags intact. Returns are free and easy." },
+      { "question": "Which payment methods do you accept?", "answer": "We accept Cash on Delivery (COD), bKash, Nagad, Rocket, and all major credit/debit cards." }
+    ],
+    "formTitle": "Send us a message",
+    "formSubtitle": "Fill in the form and our team will get back to you within 24 hours.",
+    "name": "Name",
+    "email": "Email",
+    "subject": "Subject",
+    "message": "Message",
+    "submit": "Send Message",
+    "success": "Your message has been sent. We'll reply soon!"
+  },
+  "CartPage": {
+    "title": "Shopping Cart",
+    "itemCount": "{count, plural, =1 {1 item} other {# items}}",
+    "emptyTitle": "Your cart is empty",
+    "emptyDescription": "Add products to your cart to get started.",
+    "browseProducts": "Browse Products",
+    "remove": "Remove",
+    "addItem": "Add {name}",
+    "subtotal": "Subtotal",
+    "shipping": "Shipping",
+    "free": "Free",
+    "total": "Total",
+    "checkout": "Proceed to Checkout",
+    "taxNote": "Delivery and handling charges are calculated at checkout.",
+    "continueShopping": "Continue shopping",
+    "summaryTitle": "Order Summary",
+    "freeShippingEarned": "Congratulations! You have earned free shipping.",
+    "freeShippingRemaining": "Add {amount} more to unlock free shipping",
+    "secureCheckout": "Secure checkout — all payments are encrypted."
+  },
+  "CheckoutPage": {
+    "title": "Checkout",
+    "breadcrumbCart": "Cart",
+    "contactTitle": "Contact Information",
+    "contactDescription": "We'll use these details to confirm your order.",
+    "fullName": "Full Name",
+    "email": "Email Address",
+    "phone": "Phone Number",
+    "shippingTitle": "Shipping Address",
+    "shippingDescription": "Where should we deliver your order?",
+    "address": "Address",
+    "addressPlaceholder": "House, Road, Area",
+    "city": "City",
+    "cityPlaceholder": "Dhaka",
+    "postalCode": "Postal Code (optional)",
+    "notes": "Order Notes (optional)",
+    "notesPlaceholder": "Delivery instructions, landmarks...",
+    "deliveryTitle": "Delivery Method",
+    "paymentTitle": "Payment Method",
+    "payment": {
+      "cod": "Cash on Delivery",
+      "bkash": "bKash"
+    },
+    "paymentDesc": {
+      "cod": "Pay cash when your order arrives",
+      "bkash": "Pay via bKash to 01XXXXXXXXX"
+    },
+    "delivery": {
+      "standard": "Standard Delivery",
+      "express": "Express Delivery"
+    },
+    "eta": {
+      "standard": "Estimated 5–7 business days",
+      "express": "Estimated 2–3 business days"
+    },
+    "free": "Free",
+    "freeShippingNote": "Standard delivery is free for you!",
+    "placeOrder": "Place Order · {total}",
+    "shipMore": "Add ৳{remaining} more to qualify for free standard delivery."
+  },
+  "ThankYouPage": {
+    "title": "Thank you for your order!",
+    "subtitle": "We've received your order and it is being prepared. A confirmation has been sent to your email.",
+    "orderNumber": "Order Number",
+    "date": "Order Date",
+    "items": "Items",
+    "total": "Total",
+    "payment": "Payment",
+    "status": "Status",
+    "paymentLabel": {
+      "cod": "Cash on Delivery",
+      "bkash": "bKash"
+    },
+    "statusLabel": {
+      "processing": "Processing",
+      "shipped": "Shipped",
+      "delivered": "Delivered"
+    },
+    "viewInvoice": "View Invoice",
+    "continueShopping": "Continue Shopping",
+    "notFound": "Order not found",
+    "notFoundDescription": "We couldn't find this order. It may have been placed on another device."
+  },
+  "InvoicePage": {
+    "invoice": "Invoice",
+    "number": "Invoice No",
+    "date": "Date",
+    "status": "Status",
+    "brandTagline": "Premium fashion store — quality clothing for everyone.",
+    "brandAddress": "Level 4, Dhanmondi, Dhaka 1205, Bangladesh",
+    "billedTo": "Billed To",
+    "paymentMethod": "Payment Method",
+    "table": {
+      "product": "Product",
+      "price": "Price",
+      "qty": "Qty",
+      "total": "Total"
+    },
+    "subtotal": "Subtotal",
+    "shipping": "Shipping",
+    "free": "Free",
+    "total": "Grand Total",
+    "payment": {
+      "cod": "Cash on Delivery",
+      "bkash": "bKash"
+    },
+    "delivery": {
+      "standard": "Standard Delivery",
+      "express": "Express Delivery"
+    },
+    "status": {
+      "processing": "Processing",
+      "shipped": "Shipped",
+      "delivered": "Delivered"
+    },
+    "thankYouNote": "Thank you for shopping with Fashion Store!",
+    "print": "Print Invoice",
+    "backToShop": "Back to Shop",
+    "notFound": "Invoice not found",
+    "notFoundDescription": "The invoice you're looking for doesn't exist or has expired."
+  },
+  "Header": {
+    "mainNav": "Main navigation",
+    "mobileNav": "Mobile navigation",
+    "cartAria": "Shopping cart",
+    "accountAria": "Account",
+    "openMenu": "Open menu",
+    "nav": {
+      "home": "Home",
+      "shop": "Shop",
+      "categories": "Categories",
+      "about": "About",
+      "blog": "Blog",
+      "gallery": "Gallery",
+      "contact": "Contact"
+    },
+    "categories": {
+      "women": "Women",
+      "men": "Men",
+      "kids": "Kids",
+      "accessories": "Accessories"
+    },
+    "megaMenu": {
+      "shopAll": "Shop All Products",
+      "allCategories": "All Categories",
+      "viewAll": "View all",
+      "desc": {
+        "women": "Dresses, kurtis, sharees & more",
+        "men": "Panjabi, shirts & essentials",
+        "kids": "Fun & comfy fits for little ones",
+        "accessories": "Bags, watches, sunglasses & more"
+      },
+      "groups": {
+        "women": {
+          "kurtis": "Kurtis & Suits",
+          "sharees": "Sharees & Party Wear",
+          "dresses": "Dresses & Tunics"
+        },
+        "men": {
+          "panjabi": "Panjabi",
+          "shirts": "Shirts & Tops",
+          "ethnic": "Ethnic & Home"
+        },
+        "kids": {
+          "kurta": "Kurta Sets",
+          "wear": "Wear",
+          "footwear": "Footwear"
+        },
+        "accessories": {
+          "bags": "Bags",
+          "watches": "Watches",
+          "eyewear": "Eyewear",
+          "personal": "Personal Accessories"
+        }
+      },
+      "links": {
+        "floralCottonKurti": "Floral Cotton Kurti",
+        "salwarKameez": "Designer Salwar Kameez",
+        "printedLawnKurti": "Printed Lawn Kurti",
+        "chiffonPartyKurti": "Chiffon Party Kurti",
+        "muslinSharee": "Party Wear Muslin Sharee",
+        "silkOrganzaSharee": "Silk Organza Sharee",
+        "anarkaliGown": "Elegant Anarkali Gown",
+        "summerMaxiDress": "Summer Maxi Dress",
+        "tunicDress": "Tunic Dress",
+        "hijabCollection": "Hijab Collection",
+        "cottonPanjabi": "Classic Cotton Panjabi",
+        "jacquardPanjabi": "Jacquard Panjabi",
+        "poloShirt": "Premium Polo Shirt",
+        "cottonFatua": "Casual Cotton Fatua",
+        "denimJeans": "Slim Fit Denim Jeans",
+        "waistcoatSet": "Heritage Waistcoat Set",
+        "cottonLungi": "Cotton Lungi",
+        "towelFabric": "Turkish Towel Fabric Sets",
+        "kurtaPajama": "Kids Kurta Pajama Set",
+        "festiveKurta": "Kids Festive Kurta Set",
+        "printedTShirt": "Kids Printed T-Shirt",
+        "denimJacket": "Kids Denim Jacket",
+        "cottonPajama": "Kids Cotton Pajama",
+        "canvasSandals": "Kids Canvas Sandals",
+        "leatherBag": "Leather Messenger Bag",
+        "analogWatch": "Analog Wrist Watch",
+        "aviatorSunglasses": "Aviator Sunglasses",
+        "silkScarf": "Silk Scarf",
+        "leatherBelt": "Leather Belt"
+      }
+    },
+    "mobile": {
+      "greeting": "Welcome to Fashion Store",
+      "menu": "Menu",
+      "account": "Account",
+      "wishlist": "My Wishlist",
+      "cart": "My Cart",
+      "profile": "My Profile",
+      "search": "Search"
+    },
+    "bottom": {
+      "label": "Bottom navigation",
+      "home": "Home",
+      "search": "Search",
+      "cart": "Cart",
+      "wishlist": "Wishlist",
+      "profile": "Profile",
+      "searchPlaceholder": "Search products...",
+      "searchDesc": "Search products",
+      "noResults": "No products found."
+    }
+  },
+  "Footer": {
+    "navAria": "Footer navigation",
+    "rights": "© {year} {siteName}. All rights reserved.",
+    "nav": {
+      "about": "About",
+      "products": "Products",
+      "contact": "Contact",
+      "terms": "Terms",
+      "privacy": "Privacy",
+      "blog": "Blog",
+      "gallery": "Gallery"
+    },
+    "address": "House 12, Road 5, Dhanmondi, Dhaka 1205, Bangladesh",
+    "phone": "+880 1712-345678",
+    "tagline": "Premium Bangladeshi fashion — ethnic wear, panjabi, kurtis, sharees and more, delivered across the country.",
+    "email": "support@fashionstore.com.bd",
+    "shopTitle": "Shop by Category",
+    "shopLinks": {
+      "women": "Women",
+      "men": "Men",
+      "kids": "Kids",
+      "accessories": "Accessories"
+    },
+    "customerTitle": "Quick Links",
+    "newsletterTitle": "Join Our Newsletter",
+    "newsletterDesc": "Subscribe to get exclusive offers, new arrivals and style tips straight to your inbox.",
+    "newsletterPlaceholder": "Your email address",
+    "newsletterSubscribe": "Subscribe",
+    "payments": "We accept",
+    "newsletterSuccess": "Thanks for subscribing! Check your inbox soon."
+  },
+  "Hero": {
+    "sliderAria": "Featured promotions",
+    "prevSlide": "Previous slide",
+    "nextSlide": "Next slide",
+    "goToSlide": "Go to slide {number}",
+    "shopNow": "Shop Now",
+    "banners": [
+      {
+        "alt": "Fashion Store new arrivals banner"
+      },
+      {
+        "alt": "Fashion Store offer banner"
+      },
+      {
+        "alt": "Fashion Store collection banner"
+      }
+    ]
+  },
+  "Marquee": {
+    "items": [
+      "Free delivery on orders over ৳2,000",
+      "Up to 60% off this weekend",
+      "New collection just dropped",
+      "Easy 7-day returns",
+      "bKash · Nagad · COD accepted"
+    ]
+  },
+  "Coupons": {
+    "sectionHeading": "Coupons & Offers",
+    "sectionSubtitle": "Exclusive discounts across the whole family.",
+    "items": [
+      {
+        "category": "Men",
+        "percent": "50%",
+        "title": "Men's Collection",
+        "description": "Flat 50% off panjabi, polo & denim for men.",
+        "code": "MEN50",
+        "cta": "Shop Men"
+      },
+      {
+        "category": "Women",
+        "percent": "60%",
+        "title": "Women's Collection",
+        "description": "Flat 60% off sharee, kurti & maxi dresses.",
+        "code": "WOMEN60",
+        "cta": "Shop Women"
+      },
+      {
+        "category": "Kids",
+        "percent": "50%",
+        "title": "Kids Collection",
+        "description": "Flat 50% off kids kurta sets & everyday wear.",
+        "code": "KID50",
+        "cta": "Shop Kids"
+      },
+      {
+        "category": "Accessories",
+        "percent": "40%",
+        "title": "Accessories Sale",
+        "description": "Flat 40% off bags, watches, sunglasses & more.",
+        "code": "ACC40",
+        "cta": "Shop Accessories"
+      }
+    ]
+  },
+  "Shop": {
+    "title": "Shop",
+    "subtitle": "Explore our curated Bangladeshi fashion collection.",
+    "productsCount": "Showing {count} products",
+    "category": "Category",
+    "inStock": "In stock",
+    "outOfStock": "Out of stock",
+    "addToCart": "Add to Cart",
+    "addedToCart": "Added",
+    "addWishlist": "Add to wishlist",
+    "removeWishlist": "Remove from wishlist",
+    "description": "Description",
+    "backToShop": "Back to Shop",
+    "notFoundTitle": "Product not found",
+    "notFoundDescription": "The product you are looking for does not exist.",
+    "quickView": "Quick View",
+    "viewProduct": "View Product",
+    "viewDetails": "View Details",
+    "breadcrumbHome": "Home",
+    "categorySubtitle": "Browse our curated {category} collection.",
+    "categories": {
+      "women": "Women",
+      "men": "Men",
+      "kids": "Kids",
+      "accessories": "Accessories"
+    },
+    "sku": "SKU",
+    "items": "items",
+    "colors": "Color",
+    "sizes": "Size",
+    "scanQr": "Scan to view",
+    "shareProduct": "Scan this QR to view product",
+    "qrHint": "Point your phone camera at the code to open this product instantly.",
+    "price": "Price",
+    "quantity": "Quantity",
+    "decreaseQty": "Decrease quantity",
+    "increaseQty": "Increase quantity",
+    "buyNow": "Buy Now",
+    "whatsapp": "WhatsApp",
+    "messenger": "Messenger",
+    "deliveryInfo": "Delivery Information",
+    "insideDhaka": "Inside Dhaka",
+    "insideDhakaEstimate": "24-48 hrs",
+    "outsideDhaka": "Outside Dhaka",
+    "outsideDhakaEstimate": "2-4 days",
+    "paymentMethod": "Payment",
+    "paymentMethodValue": "COD, bKash, Nagad",
+    "additionalInfo": "Additional Information",
+    "reviews": "Reviews",
+    "reviewsCount": "{count} reviews",
+    "writeReview": "Write a Review",
+    "reviewPlaceholder": "Share your experience with this product...",
+    "submitReview": "Submit Review",
+    "reviewThanks": "Thank you! Your review has been submitted.",
+    "attBrand": "Brand",
+    "attCategory": "Category",
+    "attSku": "SKU",
+    "attStock": "Stock",
+    "attRating": "Rating",
+    "relatedProducts": "You May Also Like",
+    "recentlyViewed": "Recently Viewed",
+    "hoverToZoom": "Hover to zoom",
+    "imageGallery": "gallery image",
+    "browseProducts": "Browse Products"
+  },
+  "Features": {
+    "sectionHeading": "Why Shop With Us",
+    "sectionSubtitle": "A shopping experience designed for Bangladesh.",
+    "items": {
+      "shipping": {
+        "title": "Free Delivery",
+        "description": "Complimentary delivery across Bangladesh on all orders over ৳2,000."
+      },
+      "payment": {
+        "title": "Secure Payments",
+        "description": "Pay securely with bKash, Nagad, Rocket, cards and cash on delivery."
+      },
+      "returns": {
+        "title": "Easy Returns",
+        "description": "7-day hassle-free return and exchange policy on all items."
+      },
+      "quality": {
+        "title": "Quality Guarantee",
+        "description": "Premium materials and craftsmanship you can trust."
+      }
+    }
+  },
+  "Testimonials": {
+    "title": "What Our Customers Say",
+    "subtitle": "Join thousands of happy customers across Bangladesh who trust Fashion Store for their style needs.",
+    "items": [
+      {
+        "quote": "The quality of the clothing is outstanding. I have never been more satisfied with an online fashion store.",
+        "name": "Rahima Akter",
+        "role": "Verified Customer, Dhaka",
+        "rating": 5
+      },
+      {
+        "quote": "Fast delivery and beautiful pieces. My new go-to destination for stylish wardrobe updates.",
+        "name": "Tanvir Ahmed",
+        "role": "Verified Customer, Chattogram",
+        "rating": 5
+      },
+      {
+        "quote": "Attention to detail is incredible. The sizing guide was accurate and the fit is perfect.",
+        "name": "Nusrat Jahan",
+        "role": "Verified Customer, Sylhet",
+        "rating": 5
+      },
+      {
+        "quote": "Elegant fabric and a flawless fit. I received so many compliments at the wedding I attended.",
+        "name": "Farhana Yasmin",
+        "role": "Verified Customer, Rajshahi",
+        "rating": 5
+      },
+      {
+        "quote": "Ordering was simple and the packaging felt premium. I love supporting a store that truly cares.",
+        "name": "Mahmudul Hasan",
+        "role": "Verified Customer, Khulna",
+        "rating": 4
+      },
+      {
+        "quote": "The kurti set exceeded my expectations — beautiful colour and great stitching. Will order again soon.",
+        "name": "Sharmin Sultana",
+        "role": "Verified Customer, Comilla",
+        "rating": 5
+      },
+      {
+        "quote": "Excellent customer service and a hassle-free 7-day return. Shopping here is always a pleasure.",
+        "name": "Imran Hossain",
+        "role": "Verified Customer, Barishal",
+        "rating": 4
+      },
+      {
+        "quote": "My whole family shops here now. The kids' collection is adorable and the fit is spot on.",
+        "name": "Sadia Afrin",
+        "role": "Verified Customer, Rangpur",
+        "rating": 5
+      },
+      {
+        "quote": "Premium materials you can actually feel. The sharee looked even better in person than online.",
+        "name": "Jannatul Ferdous",
+        "role": "Verified Customer, Mymensingh",
+        "rating": 5
+      },
+      {
+        "quote": "Quick delivery to my doorstep and genuine quality. A brand I can confidently recommend.",
+        "name": "Rakib Uddin",
+        "role": "Verified Customer, Sylhet",
+        "rating": 4
+      }
+    ]
+  },
+  "CTA": {
+    "title": "Ready to Elevate Your Wardrobe?",
+    "subtitle": "Create an account to unlock exclusive deals and faster checkout across Bangladesh.",
+    "button": "Get Started"
+  },
+  "About": {
+    "title": "About Our Store",
+    "subtitle": "We are committed to bringing you quality fashion that fits your lifestyle.",
+    "metaTitle": "About",
+    "metaDescription": "Learn more about Fashion Store and what we stand for.",
+    "paragraph1": "Fashion Store is a Bangladeshi e-commerce platform dedicated to curating stylish, high-quality apparel for every occasion. Our mission is to make fashion accessible, sustainable, and effortless for everyone in Bangladesh.",
+    "paragraph2": "From timeless essentials to trend-forward statement pieces, we source premium materials and work with trusted partners to deliver products across the country you will love.",
+    "heroTitle": "Crafting Fashion with Purpose",
+    "heroBadge": "About Fashion Store",
+    "heroSubtitle": "Since our founding, we've been on a mission to bring premium Bangladeshi fashion to every doorstep. Quality, authenticity, and customer delight drive everything we do.",
+    "banner": {
+      "kicker": "Our Promise",
+      "title": "Premium Fashion, Delivered Across Bangladesh",
+      "subtitle": "Handpicked designs, festival-ready outfits and everyday essentials — all crafted with the care your style deserves.",
+      "button": "Explore the Collection"
+    },
+    "mission": {
+      "title": "Our Mission",
+      "description": "To democratize premium fashion across Bangladesh — making designer-quality ethnic and contemporary wear accessible, affordable, and delivered to your doorstep."
+    },
+    "vision": {
+      "title": "Our Vision",
+      "description": "To become Bangladesh's most loved fashion destination, where every customer finds their perfect style — from timeless ethnic classics to contemporary trends."
+    },
+    "values": {
+      "title": "Our Core Values",
+      "quality": {
+        "title": "Uncompromising Quality",
+        "description": "Every piece is curated from premium fabrics with meticulous attention to detail — because you deserve nothing less."
+      },
+      "authenticity": {
+        "title": "Authenticity First",
+        "description": "We celebrate Bangladeshi craftsmanship, working with local artisans and designers to bring authentic heritage to modern wardrobes."
+      },
+      "customer": {
+        "title": "Customer Delight",
+        "description": "From seamless shopping to hassle-free returns, your experience is our top priority. We're here for you at every step."
+      },
+      "sustainability": {
+        "title": "Sustainable Practices",
+        "description": "We partner with responsible suppliers and minimize waste — because fashion shouldn't come at the cost of our planet."
+      }
+    },
+    "stats": {
+      "customers": "Happy Customers",
+      "orders": "Orders Delivered",
+      "products": "Curated Products",
+      "cities": "Cities Served"
+    },
+    "story": {
+      "title": "Our Journey",
+      "subtitle": "From a small vision to thousands of happy customers — here's how we grew.",
+      "2022": {
+        "title": "The Beginning",
+        "description": "Founded with a simple goal: bring authentic Bangladeshi fashion online with uncompromising quality."
+      },
+      "2023": {
+        "title": "Expansion",
+        "description": "Launched nationwide delivery, expanded to 500+ curated products, and served 10,000+ customers."
+      },
+      "2024": {
+        "title": "Milestones",
+        "description": "Reached 50,000+ happy customers, introduced COD & bKash, and launched our mobile app."
+      },
+      "2025": {
+        "title": "The Future",
+        "description": "Scaling sustainable practices, opening experience centers, and bringing Bangladeshi fashion globally."
+      }
+    },
+    "team": {
+      "title": "Meet Our Leadership",
+      "subtitle": "Passionate individuals driving our vision forward.",
+      "members": [
+        {
+          "name": "Ayesha Rahman",
+          "role": "Founder & CEO",
+          "bio": "Former fashion buyer with 12+ years in retail. Passionate about Bangladeshi textiles and women's empowerment."
+        },
+        {
+          "name": "Karim Hassan",
+          "role": "COO",
+          "bio": "Operations expert who built our nationwide logistics network. Ensures every order reaches you on time."
+        },
+        {
+          "name": "Nusrat Jahan",
+          "role": "Creative Director",
+          "bio": "Award-winning designer curating our collections. Blends heritage craftsmanship with modern aesthetics."
+        },
+        {
+          "name": "Rafiq Mahmud",
+          "role": "CTO",
+          "bio": "Tech leader building seamless shopping experiences. Makes fashion accessible with a tap."
+        }
+      ]
+    },
+    "cta": {
+      "title": "Ready to Experience Premium Fashion?",
+      "subtitle": "Join thousands of satisfied customers across Bangladesh. Shop with confidence — quality guaranteed.",
+      "button": "Start Shopping"
+    }
+  },
+  "Auth": {
+    "brand": {
+      "tagline": "Discover the latest in fashion",
+      "description": "Shop trendy clothing, elegant sharees, panjabis and more — curated fresh styles delivered to your doorstep.",
+      "points": {
+        "shipping": "Fast & free delivery islandwide",
+        "quality": "Premium quality fabrics",
+        "support": "24/7 customer support"
+      }
+    },
+    "login": {
+      "metaTitle": "Sign In",
+      "metaDescription": "Sign in to your Fashion Store account.",
+      "heading": "Welcome back",
+      "subheading": "Sign in to continue to your account.",
+      "emailLabel": "Email",
+      "emailPlaceholder": "you@example.com",
+      "passwordLabel": "Password",
+      "passwordPlaceholder": "••••••••",
+      "button": "Sign In",
+      "submitting": "Signing in...",
+      "noAccount": "Don't have an account?",
+      "link": "Register",
+      "demoHint": "Demo login — any email & password works, or try",
+      "demoEmail": "demo@fashion.com",
+      "demoPassword": "demo123"
+    },
+    "register": {
+      "metaTitle": "Create Account",
+      "metaDescription": "Create a new Fashion Store account.",
+      "heading": "Create an account",
+      "subheading": "Join Fashion Store and start shopping today.",
+      "nameLabel": "Name",
+      "namePlaceholder": "John Doe",
+      "emailLabel": "Email",
+      "emailPlaceholder": "you@example.com",
+      "passwordLabel": "Password",
+      "passwordPlaceholder": "••••••••",
+      "confirmPasswordLabel": "Confirm Password",
+      "confirmPasswordPlaceholder": "••••••••",
+      "button": "Create Account",
+      "submitting": "Creating account...",
+      "hasAccount": "Already have an account?",
+      "link": "Sign In"
+    },
+    "validation": {
+      "email": "Please enter a valid email address",
+      "password": "Password must be at least 6 characters",
+      "name": "Name must be at least 2 characters",
+      "confirmPassword": "Passwords do not match"
+    },
+    "toasts": {
+      "loginSuccess": "Logged in successfully",
+      "registerSuccess": "Account created successfully"
+    }
+  },
+  "Dashboard": {
+    "sidebar": {
+      "navAria": "Dashboard navigation",
+      "overview": "Overview",
+      "products": "Products",
+      "orders": "Orders",
+      "profile": "Profile"
+    },
+    "overview": {
+      "title": "Dashboard Overview",
+      "welcomeBack": "Welcome back, {name}!",
+      "welcome": "Welcome to your dashboard.",
+      "totalOrders": "Total Orders",
+      "products": "Products",
+      "wishlist": "Wishlist",
+      "signOut": "Sign Out"
+    },
+    "products": {
+      "title": "Products",
+      "emptyTitle": "No products yet",
+      "emptyDescription": "Products you add will appear here."
+    },
+    "orders": {
+      "title": "Orders",
+      "emptyTitle": "No orders yet",
+      "emptyDescription": "Your order history will appear here."
+    },
+    "profile": {
+      "title": "Profile",
+      "accountInformation": "Account Information",
+      "name": "Name",
+      "email": "Email",
+      "guest": "Guest"
+    }
+  },
+  "NotFound": {
+    "title": "The page went out of style",
+    "description": "The page you are looking for doesn't exist or may have been moved. Let's get you back to the latest trends.",
+    "code": "404",
+    "banner": "Style not found"
+  },
+  "ErrorPage": {
+    "title": "Something went wrong",
+    "description": "An unexpected error occurred. Please try again, or refresh the page.",
+    "tryAgain": "Try Again"
+  },
+  "WomenCollection": {
+    "title": "Women's Collection",
+    "subtitle": "Handpicked styles for her — fresh arrivals, everyday essentials and festive favourites.",
+    "seeMore": "See More"
+  },
+  "CollectionFilter": {
+    "filterTitle": "Filter Products",
+    "filterSize": "Size",
+    "filterColor": "Color",
+    "filterPrice": "Price",
+    "filterAll": "All",
+    "filterFrom": "Min",
+    "filterTo": "Max",
+    "filterReset": "Reset",
+    "noResults": "No products found.",
+    "resultsCount": "{count} products",
+    "seeMore": "Show More",
+    "showLess": "Show Less",
+    "filterCategory": "Category",
+    "filterSearch": "Search",
+    "filterSearchPlaceholder": "Search products...",
+    "filterButton": "Filter",
+    "cardStyleLabel": "Card Style",
+    "cardStyle": {
+      "classic": "Classic",
+      "editorial": "Editorial",
+      "playful": "Playful",
+      "luxe": "Luxe"
+    },
+    "categories": {
+      "women": "Women",
+      "men": "Men",
+      "kids": "Kids",
+      "accessories": "Accessories"
+    }
+  },
+  "MenCollection": {
+    "title": "Men's Collection",
+    "subtitle": "Sharp, comfortable styles for him — panjabi, shirts and everyday essentials.",
+    "seeMore": "See More"
+  },
+  "KidsCollection": {
+    "title": "Kids Collection",
+    "subtitle": "Playful and comfy fits for little ones — festive sets and everyday favourites.",
+    "seeMore": "See More"
+  },
+  "AccessoriesCollection": {
+    "title": "Accessories Sale",
+    "subtitle": "Complete your look — bags, watches, sunglasses and more at great prices.",
+    "seeMore": "See More"
+  },
+  "Blog": {
+    "metaTitle": "Style Blog",
+    "metaDescription": "Fashion trends, style guides and stories from Fashion Store.",
+    "heroBadge": "Our Journal",
+    "heroTitle": "Fashion Stories & Style Guides",
+    "heroSubtitle": "Inspiration to help you dress better every day — curated trends, care tips and the stories behind our collections.",
+    "featured": "Featured",
+    "readMore": "Read Article",
+    "readTime": "{minutes} min read",
+    "posts": [
+      {
+        "title": "5 Ways to Style a Printed Kurti for Every Occasion",
+        "excerpt": "From desk to dinner, learn how to mix and match your favorite printed kurtis with separates you already own.",
+        "category": "Style Guide",
+        "author": "Ayesha Rahman",
+        "date": "June 18, 2026"
+      },
+      {
+        "title": "The Ultimate Sharee Draping Guide for Beginners",
+        "excerpt": "Master the classic 6-yard drape with our step-by-step guide — no pins, no fuss, perfect fall every time.",
+        "category": "Heritage",
+        "author": "Nusrat Jahan",
+        "date": "June 10, 2026"
+      },
+      {
+        "title": "How to Care for Panjabi & Sharp Fabrics",
+        "excerpt": "Keep your festive wear crisp and vibrant for years. Our simple care routine for premium cottons and jacquards.",
+        "category": "Care",
+        "author": "Karim Hassan",
+        "date": "May 28, 2026"
+      },
+      {
+        "title": "Color Palettes That Flatter Every Deshi Skin Tone",
+        "excerpt": "Discover the hues that make you glow — a tailored guide to mixing tradition with modern color science.",
+        "category": "Trends",
+        "author": "Ayesha Rahman",
+        "date": "May 15, 2026"
+      },
+      {
+        "title": "Kids Festive Wardrobe: Comfort Meets Celebration",
+        "excerpt": "Dressing little ones for Eid and puja without tears — breathable fabrics, easy fits, joyful colors.",
+        "category": "Family",
+        "author": "Sadia Afrin",
+        "date": "May 02, 2026"
+      },
+      {
+        "title": "Summer Essentials: Staying Cool in Dhaka's Heat",
+        "excerpt": "Lightweight cottons, airy cuts and moisture-wicking weaves to keep you fresh through the longest days.",
+        "category": "Style Guide",
+        "author": "Jannatul Ferdous",
+        "date": "April 20, 2026"
+      }
+    ],
+    "newsletterTitle": "Get Style Ideas in Your Inbox",
+    "newsletterSubtitle": "Join our community of 30,000+ readers. New drops, style guides and exclusive offers — twice a month, no spam.",
+    "newsletterPlaceholder": "your@email.com",
+    "newsletterButton": "Subscribe"
+  },
+  "Gallery": {
+    "metaTitle": "Lookbook Gallery",
+    "metaDescription": "Browse our latest collection photos and get inspired.",
+    "heroBadge": "Lookbook",
+    "heroTitle": "The Fashion Store Lookbook",
+    "heroSubtitle": "A curated visual journey through our latest arrivals — styling ideas for women, men, kids and accessories.",
+    "filterAll": "All",
+    "filters": {
+      "women": "Women",
+      "men": "Men",
+      "kids": "Kids",
+      "accessories": "Accessories"
+    },
+    "results": "{count} looks",
+    "viewProduct": "View Product",
+    "emptyTitle": "No looks found",
+    "emptySubtitle": "Try a different category to explore more styles."
+  },
+  "Terms": {
+    "metaTitle": "Terms & Conditions",
+    "metaDescription": "Terms and conditions governing the use of Fashion Store.",
+    "heroBadge": "Legal",
+    "heroTitle": "Terms & Conditions",
+    "heroSubtitle": "Please read these terms carefully before using Fashion Store. By shopping with us you agree to the following.",
+    "lastUpdated": "Last updated: July 2026",
+    "sectionTitle": "Table of Contents",
+    "sections": [
+      {
+        "title": "1. Agreement to Terms",
+        "body": "By accessing and using the Fashion Store website, you accept these Terms & Conditions in full. If you disagree with any part of these terms, please do not use our services."
+      },
+      {
+        "title": "2. Products & Pricing",
+        "body": "We display products with the best possible accuracy. Prices are quoted in Bangladeshi Taka (BDT) and are subject to change without notice. Sale prices apply only for the stated period."
+      },
+      {
+        "title": "3. Orders & Acceptance",
+        "body": "All orders are subject to acceptance and availability. We reserve the right to refuse or cancel an order in cases of suspected fraud or pricing errors. A confirmation email marks acceptance."
+      },
+      {
+        "title": "4. Payment",
+        "body": "We accept Cash on Delivery (COD), bKash, Nagad, Rocket and major credit/debit cards. For COD, please keep the exact amount ready or use our digital payment links."
+      },
+      {
+        "title": "5. Delivery & Shipping",
+        "body": "Standard delivery takes 2-4 business days nationwide. Delivery times are estimates and may vary due to weather or logistics. Risk passes to the buyer upon delivery."
+      },
+      {
+        "title": "6. Returns & Refunds",
+        "body": "Unused items with tags can be returned within 7 days of delivery. Refunds are processed within 3-5 business days after inspection to the original payment method."
+      },
+      {
+        "title": "7. Intellectual Property",
+        "body": "All content, images, logos and trade names on this site belong to Fashion Store and may not be used without our written permission."
+      },
+      {
+        "title": "8. Limitation of Liability",
+        "body": "Fashion Store is not liable for indirect or consequential damages arising from the use of our site or products, to the maximum extent permitted by law."
+      },
+      {
+        "title": "9. Changes to These Terms",
+        "body": "We may update these terms from time to time. Continued use of the site after changes are posted constitutes acceptance of the revised terms."
+      },
+      {
+        "title": "10. Contact Information",
+        "body": "Questions about these Terms may be sent to support@fashionstore.com.bd or through our contact page."
+      }
+    ]
+  },
+  "Privacy": {
+    "metaTitle": "Privacy Policy",
+    "metaDescription": "How Fashion Store collects, uses and protects your personal information.",
+    "heroBadge": "Privacy",
+    "heroTitle": "Privacy Policy",
+    "heroSubtitle": "Your trust matters to us. This policy explains what information we collect, why we collect it, and how we keep it safe.",
+    "lastUpdated": "Last updated: July 2026",
+    "sectionTitle": "Table of Contents",
+    "sections": [
+      {
+        "title": "1. Information We Collect",
+        "body": "We collect information you provide directly — such as your name, email, phone number, shipping address and payment method when you place an order or create an account. We also collect limited technical data like device type and pages visited to improve your experience."
+      },
+      {
+        "title": "2. How We Use Your Information",
+        "body": "Your information is used to process orders, deliver products, provide customer support, send order updates and, with your consent, share promotional offers. We never sell your personal data to third parties."
+      },
+      {
+        "title": "3. Payment Security",
+        "body": "All payments are processed through secure, PCI-DSS compliant gateways (bKash, Nagad, Rocket and card networks). We do not store your full card number or payment credentials on our servers."
+      },
+      {
+        "title": "4. Cookies & Tracking",
+        "body": "We use cookies to keep your cart items, remember preferences and understand how visitors browse our site. You can control or disable cookies in your browser settings at any time."
+      },
+      {
+        "title": "5. Data Sharing",
+        "body": "We share information only with trusted partners who help us deliver — such as courier services and payment processors — and only to the extent needed to fulfill your order."
+      },
+      {
+        "title": "6. Data Retention",
+        "body": "Order records are kept for warranty and accounting purposes as required by law. You may request deletion of your account and personal data at any time by contacting our support team."
+      },
+      {
+        "title": "7. Your Rights",
+        "body": "You have the right to access, correct, or delete your personal information, and to opt out of marketing communications at any time through your account or by contacting us."
+      },
+      {
+        "title": "8. Children's Privacy",
+        "body": "Our services are not directed at children under 13. We do not knowingly collect personal information from children. If you believe a child has provided data, please contact us immediately."
+      },
+      {
+        "title": "9. Policy Updates",
+        "body": "We may update this policy periodically to reflect legal or operational changes. Material changes will be announced on this page with an updated effective date."
+      },
+      {
+        "title": "10. Contact Us",
+        "body": "For privacy questions or requests, contact us at privacy@fashionstore.com.bd. We aim to respond to all privacy inquiries within 48 hours."
+      }
+    ]
+  }
+}
