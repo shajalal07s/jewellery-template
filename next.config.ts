@@ -5,7 +5,7 @@ const withNextIntl = createNextIntlPlugin();
 
 const nextConfig: NextConfig = {
   reactStrictMode: true,
-  output: "standalone",
+  ...(process.env.VERCEL ? {} : { output: "standalone" }),
 };
 
 export default withNextIntl(nextConfig);
