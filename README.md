@@ -1,7 +1,5 @@
 <div align="center">
 
-<img src="public/images/unimart/logo/logo.webp" alt="Jewellery Store Logo" width="110" />
-
 # ✨ Sha Jalal Jewellery Storefront ✨
 
 _A premium, bilingual (EN/BN) e‑commerce frontend crafted with Next.js — where every pixel sparkles like a diamond._
