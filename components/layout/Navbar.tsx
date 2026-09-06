@@ -2,37 +2,100 @@
 
 import { useMemo, useState } from "react";
 import Image from "next/image";
-import { useFormatter, useTranslations } from "next-intl";
+import { useTranslations } from "next-intl";
 import { usePathname, Link } from "@/i18n/navigation";
-import { ChevronDown, ChevronRight, LayoutGrid } from "lucide-react";
+import { ChevronDown } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
-import { MEGA_MENU_CATEGORIES, NORMAL_LINKS } from "@/components/layout/header/nav";
-import { products } from "@/features/shop/products";
+import { NORMAL_LINKS } from "@/components/layout/header/nav";
 
-export function Navbar() {
+type ElementCategory = "necklace" | "bracelet" | "ring" | "earrings" | "pendant";
+
+interface MenuElement {
+  img: string;
+  name: string;
+  category: ElementCategory;
+  comingSoon?: boolean;
+}
+
+const MENU_ELEMENTS: MenuElement[] = [
+  { img: "/images/unimart/product-img/jwellery/jw-a-01.webp", name: "21K Zirconia Statement Ring", category: "ring" },
+  { img: "/images/unimart/product-img/jwellery/jw-a-02.webp", name: "21K Gold Cubic Bracelet", category: "bracelet" },
+  { img: "/images/unimart/product-img/jwellery/jw-a-03.webp", name: "21K Gold Chain Necklace", category: "pendant" },
+  { img: "/images/unimart/product-img/jwellery/jw-a-04.webp", name: "18K Gold Cubic Necklace", category: "necklace" },
+  { img: "/images/unimart/product-img/jwellery/jw-a-05.webp", name: "Emerald Statement Ring", category: "ring", comingSoon: true },
+  { img: "/images/unimart/product-img/jwellery/jw-a-06.webp", name: "Gold Teardrop Earrings", category: "earrings" },
+  { img: "/images/unimart/product-img/jwellery/jw-a-07.webp", name: "18K Gold Bangle", category: "bracelet" },
+  { img: "/images/unimart/product-img/jwellery/jw-a-08.webp", name: "Pearl Diamond Necklace", category: "necklace" },
+  { img: "/images/unimart/product-img/jwellery/jw-a-09.webp", name: "Cubic Zirconia Earrings", category: "earrings" },
+  { img: "/images/unimart/product-img/jwellery/jw-a-10.webp", name: "Gold Sunburst Pendant", category: "pendant" },
+  { img: "/images/unimart/product-img/jwellery/jw-a-11.webp", name: "Layered Gold Necklace", category: "necklace" },
+  { img: "/images/unimart/product-img/jwellery/jw-a-12.webp", name: "Gold Chain Bracelet", category: "bracelet" },
+];
+
+const ELEMENT_TABS: { key: ElementCategory | "all"; labelKey: string }[] = [
+  { key: "all", labelKey: "megaMenu.elements.all" },
+  { key: "necklace", labelKey: "megaMenu.elements.tabs.necklace" },
+  { key: "bracelet", labelKey: "megaMenu.elements.tabs.bracelet" },
+  { key: "ring", labelKey: "megaMenu.elements.tabs.ring" },
+  { key: "earrings", labelKey: "megaMenu.elements.tabs.earrings" },
+  { key: "pendant", labelKey: "megaMenu.elements.tabs.pendant" },
+];
+
+export function Navbar({
+  light = false,
+  anchor,
+}: {
+  light?: boolean;
+  anchor?: React.RefObject<HTMLElement | null>;
+}) {
   const t = useTranslations("Header");
-  const format = useFormatter();
   const pathname = usePathname();
-  const [activeSlug, setActiveSlug] = useState<string>(MEGA_MENU_CATEGORIES[0].slug);
-
-  const productBySlug = useMemo(() => {
-    const map = new Map<string, (typeof products)[number]>();
-    for (const product of products) map.set(product.slug, product);
-    return map;
-  }, []);
-
-  const priceOf = (product: (typeof products)[number]) =>
-    format.number(product.price, { style: "currency", currency: "BDT" });
+  const [activeTab, setActiveTab] = useState<ElementCategory | "all">("all");
 
   const isActive = (href: string) =>
     href === "/" ? pathname === href : pathname.startsWith(href);
 
-  const activeCategory =
-    MEGA_MENU_CATEGORIES.find((c) => c.slug === activeSlug) ?? MEGA_MENU_CATEGORIES[0];
+  const visibleElements = useMemo(
+    () =>
+      activeTab === "all"
+        ? MENU_ELEMENTS
+        : MENU_ELEMENTS.filter((element) => element.category === activeTab),
+    [activeTab]
+  );
+
+  const countOf = (tab: ElementCategory | "all") =>
+    tab === "all"
+      ? MENU_ELEMENTS.length
+      : MENU_ELEMENTS.filter((element) => element.category === tab).length;
 
   return (
     <nav className="hidden items-center gap-1 lg:flex" aria-label={t("mainNav")}>
+      {NORMAL_LINKS.map((link) => {
+        const active = isActive(link.href);
+        return (
+          <Link
+            key={link.key}
+            href={link.href}
+            aria-current={active ? "page" : undefined}
+            className={cn(
+              "rounded-full px-3.5 py-2 text-sm font-medium transition-colors",
+              light
+                ? active
+                  ? "bg-white/20 text-white"
+                  : "text-white/90 hover:bg-white/10 hover:text-white"
+                : active
+                  ? "text-foreground bg-muted"
+                  : "text-muted-foreground hover:bg-muted hover:text-foreground"
+            )}
+          >
+            {t(`nav.${link.key}`)}
+          </Link>
+        );
+      })}
+
+      <span className={cn("mx-2 h-6 w-px", light ? "bg-white/30" : "bg-border")} aria-hidden="true" />
+
       <Popover>
         <PopoverTrigger
           openOnHover
@@ -43,16 +106,15 @@ export function Navbar() {
               type="button"
               aria-haspopup="true"
               className={cn(
-                "flex items-center gap-1.5 border border-border px-3 py-2 text-sm font-semibold transition-colors",
-                pathname.startsWith("/products")
-                  ? "bg-secondary text-secondary-foreground"
-                  : "bg-secondary/10 text-secondary hover:bg-secondary hover:text-secondary-foreground"
+                "flex items-center gap-1.5 rounded-full px-3.5 py-2 text-sm font-medium transition-colors",
+                light
+                  ? "bg-white/20 text-white hover:bg-white/10"
+                  : "text-muted-foreground hover:bg-muted hover:text-foreground"
               )}
             />
           }
         >
-          <LayoutGrid className="size-4" aria-hidden="true" />
-          {t("nav.categories")}
+          {t("nav.more")}
           <ChevronDown
             className="size-3.5 opacity-80 transition-transform data-[open]:rotate-180"
             aria-hidden="true"
@@ -61,168 +123,113 @@ export function Navbar() {
 
         <PopoverContent
           align="center"
+          side="bottom"
           sideOffset={16}
-          className="w-[min(1180px,calc(100vw-80px))] max-w-[calc(100vw-40px)] overflow-visible p-0"
+          anchor={anchor}
+          className="w-[min(1600px,calc(100vw-100px))] max-w-[calc(100vw-40px)] overflow-hidden p-0"
         >
-          <div className="border-border flex border-b">
-            <div className="bg-section-2 w-60 shrink-0 border-r p-3">
-              <p className="text-muted-foreground px-3 pt-1 pb-2 text-xs font-medium uppercase tracking-wide">
-                {t("megaMenu.allCategories")}
-              </p>
-              <div className="flex flex-col gap-1">
-                {MEGA_MENU_CATEGORIES.map((category) => {
-                  const active = category.slug === activeCategory.slug;
-                  const Icon = category.icon;
+          <div className="bg-section-2 max-h-[min(78vh,680px)] overflow-y-auto rounded-2xl p-6">
+            <div className="bg-white shadow-[0_10px_40px_rgba(0,0,0,0.08)] rounded-[50px] px-6 py-4 sm:px-10 sm:py-5">
+              <ul className="[scrollbar-width:none] flex flex-wrap items-center justify-center gap-x-6 gap-y-2 overflow-x-auto sm:gap-x-8">
+                {ELEMENT_TABS.map((tab) => {
+                  const active = tab.key === activeTab;
+                  const count = countOf(tab.key);
                   return (
-                    <button
-                      key={category.slug}
-                      type="button"
-                      onMouseEnter={() => setActiveSlug(category.slug)}
-                      className={cn(
-                        "group flex w-full items-center gap-3 border px-3 py-2.5 text-left text-sm font-medium transition-colors",
-                        active
-                          ? "border-secondary bg-secondary text-secondary-foreground"
-                          : "hover:bg-section-2 text-foreground border-transparent hover:border-border"
-                      )}
-                    >
-                      <span
+                    <li key={tab.key}>
+                      <button
+                        type="button"
+                        onMouseEnter={() => setActiveTab(tab.key)}
+                        aria-current={active ? "true" : undefined}
                         className={cn(
-                          "flex size-8 shrink-0 items-center justify-center border",
-                          active
-                            ? "bg-white/20"
-                            : "bg-white shadow-sm"
+                          "flex items-center gap-2 whitespace-nowrap transition-colors",
+                          active ? "text-primary" : "text-foreground hover:text-primary"
                         )}
                       >
-                        <Icon className="size-5" aria-hidden="true" />
-                      </span>
-                      {t(`categories.${category.slug}`)}
-                      <ChevronRight
-                        className={cn(
-                          "ml-auto size-4 transition-opacity",
-                          active ? "opacity-100" : "opacity-0 group-hover:opacity-60"
-                        )}
-                        aria-hidden="true"
-                      />
-                    </button>
+                        <span className="text-lg font-semibold">{t(tab.labelKey)}</span>
+                        <span
+                          className={cn(
+                            "flex min-w-[26px] h-[26px] items-center justify-center rounded-full px-1.5 text-xs font-semibold transition-colors",
+                            active
+                              ? "bg-primary text-white"
+                              : "bg-accent text-primary hover:bg-primary hover:text-white"
+                          )}
+                        >
+                          {count}
+                        </span>
+                      </button>
+                    </li>
                   );
                 })}
-              </div>
+              </ul>
             </div>
 
-            <div key={activeCategory.slug} className="animate-fade-in-up flex-1 p-5">
-              <div className="mb-4 flex items-center justify-between gap-4 border-b pb-3">
-                <div className="flex items-center gap-3">
-                  <span className="flex size-11 items-center justify-center border border-secondary/30 bg-secondary/10">
-                    <activeCategory.icon className="size-6 text-secondary" aria-hidden="true" />
-                  </span>
-                  <div>
-                    <p className="font-heading text-foreground text-lg font-semibold">
-                      {t(`categories.${activeCategory.slug}`)}
-                    </p>
-                    <p className="text-muted-foreground text-xs">
-                      {t(activeCategory.descKey)}
-                    </p>
-                  </div>
-                </div>
-                <Link
-                  href={activeCategory.href}
-                  className="text-secondary flex items-center gap-1 text-sm font-semibold hover:opacity-80"
-                >
-                  {t("megaMenu.viewAll")}
-                  <ChevronRight className="size-4" aria-hidden="true" />
-                </Link>
-              </div>
-
-              <div className="grid grid-cols-3 gap-4">
-                {activeCategory.groups.map((group) => (
-                  <div key={group.labelKey} className="flex flex-col gap-2">
-                    <p className="text-secondary-foreground bg-secondary px-2.5 py-1 text-xs font-semibold uppercase tracking-wide">
-                      {t(group.labelKey)}
-                    </p>
-                    <div className="grid grid-cols-2 gap-2">
-                      {group.links.slice(0, 4).map((link) => {
-                        const slug = link.href.split("/").pop() ?? "";
-                        const product = productBySlug.get(slug);
-                        const href = product
-                          ? `/products/${product.category.toLowerCase()}/${product.slug}`
-                          : link.href;
-                        return (
-                          <Link
-                            key={link.href}
-                            href={href}
-                            className="group/card flex flex-col gap-1.5 border border-border bg-white p-1.5 transition-colors hover:bg-section-2"
-                          >
-                            <span className="relative block h-28 w-full overflow-hidden bg-muted">
-                              {product?.images[0] ? (
-                                <Image
-                                  src={product.images[0]}
-                                  alt={product?.name ?? ""}
-                                  fill
-                                  sizes="220px"
-                                  className="object-cover object-center transition-transform duration-500 group-hover/card:scale-110"
-                                />
-                              ) : (
-                                <span className="text-primary font-heading flex h-full w-full items-center justify-center text-2xl font-bold">
-                                  {(product?.name ?? "?")[0]}
-                                </span>
-                              )}
-                            </span>
-                            <span className="line-clamp-1 text-center text-xs font-medium text-foreground">
-                              {product?.name ?? t(link.labelKey)}
-                            </span>
-                            {product ? (
-                              <span className="text-secondary text-center text-sm font-bold">
-                                {priceOf(product)}
-                              </span>
-                            ) : null}
-                          </Link>
-                        );
-                      })}
-                    </div>
+            <div className="relative pt-4 mt-4">
+              <div className="grid grid-cols-[repeat(auto-fill,minmax(210px,1fr))] gap-4">
+                {visibleElements.map((element) => (
+                  <div
+                    key={element.name}
+                    className={cn(
+                      "bg-white shadow-[0_0_20px_rgba(0,0,0,0.1)] rounded-xl transition-transform duration-300 hover:-translate-y-1",
+                      element.comingSoon && "opacity-90"
+                    )}
+                  >
+                    {element.comingSoon ? (
+                      <div className="p-4">
+                        <div className="relative overflow-hidden rounded-lg">
+                          <div className="bg-black/10 h-44 w-full overflow-hidden rounded-lg backdrop-blur-[6px]">
+                            <Image
+                              src={element.img}
+                              alt={element.name}
+                              width={400}
+                              height={520}
+                              className="h-full w-full object-cover blur-[2px]"
+                            />
+                          </div>
+                          <span className="bg-black text-white absolute top-1/2 left-1/2 z-10 -translate-x-1/2 -translate-y-1/2 rounded-full px-5 py-2 text-sm font-medium whitespace-nowrap backdrop-blur-xl">
+                            {t("megaMenu.elements.comingSoon")}
+                          </span>
+                        </div>
+                        <p className="text-foreground mt-4 text-center text-sm font-semibold">
+                          {element.name}
+                        </p>
+                      </div>
+                    ) : (
+                      <Link href="/shop" className="group block p-4">
+                        <div className="bg-muted h-44 w-full overflow-hidden rounded-lg">
+                          <Image
+                            src={element.img}
+                            alt={element.name}
+                            width={400}
+                            height={520}
+                            className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
+                          />
+                        </div>
+                        <p className="text-foreground mt-4 flex items-center justify-center gap-1.5 text-center text-sm font-semibold">
+                          {element.name}
+                        </p>
+                      </Link>
+                    )}
                   </div>
                 ))}
               </div>
-            </div>
-          </div>
 
-          <div className="bg-section-2 p-3">
-            <Link
-              href="/shop"
-              className="text-secondary-foreground group flex items-center justify-between bg-secondary px-4 py-3 transition-opacity hover:opacity-90"
-            >
-              <span className="flex items-center gap-2 text-sm font-bold">
-                <LayoutGrid className="size-4" aria-hidden="true" />
-                {t("megaMenu.shopAll")}
-              </span>
-              <ChevronRight
-                className="size-4 transition-transform group-hover:translate-x-1"
+              <div
                 aria-hidden="true"
+                className="pointer-events-none absolute inset-x-0 bottom-0 h-2/3 [background:linear-gradient(to_top,#f9f9f9_0%,rgba(249,249,249,0)_62%)]"
               />
-            </Link>
+            </div>
+
+            <div className="mt-4 flex justify-center">
+              <Link
+                href="/shop"
+                className="text-secondary-foreground bg-secondary hover:bg-secondary/90 rounded-full px-8 py-3 text-sm font-bold transition-colors"
+              >
+                {t("megaMenu.elements.viewAll")}
+              </Link>
+            </div>
           </div>
         </PopoverContent>
       </Popover>
-
-      <span className="bg-border mx-2 h-6 w-px" aria-hidden="true" />
-
-      {NORMAL_LINKS.map((link) => {
-        const active = isActive(link.href);
-        return (
-          <Link
-            key={link.key}
-            href={link.href}
-            aria-current={active ? "page" : undefined}
-            className={cn(
-              "px-3 py-2 text-sm font-medium transition-colors",
-              active
-                ? "text-foreground bg-muted"
-                : "text-muted-foreground hover:bg-muted hover:text-foreground"
-            )}
-          >
-            {t(`nav.${link.key}`)}
-          </Link>
-        );
-      })}
     </nav>
   );
 }

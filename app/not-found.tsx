@@ -49,7 +49,7 @@ export default function NotFound() {
           Back to Home
         </Link>
         <Link
-          href="/products"
+          href="/shop"
           className={cn(buttonVariants({ variant: "outline" }), "gap-2")}
         >
           Browse Products

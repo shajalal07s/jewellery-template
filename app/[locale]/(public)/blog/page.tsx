@@ -22,12 +22,12 @@ export async function generateMetadata({
 }
 
 const POST_IMAGES = [
-  "/images/women/women-1.jpg",
-  "/images/women/women-2.jpg",
-  "/images/men/men-1.jpg",
-  "/images/women/women-5.jpg",
-  "/images/kids/kids-3.jpg",
-  "/images/women/women-7.jpg",
+  "/images/unimart/blog-post-img/blog-post-09.webp",
+  "/images/unimart/blog-post-img/blog-post-10.webp",
+  "/images/unimart/blog-post-img/blog-post-11.webp",
+  "/images/unimart/blog-post-img/blog-post-12.webp",
+  "/images/unimart/product-img/jwellery/jw-a-05.webp",
+  "/images/unimart/product-img/jwellery/jw-a-06.webp",
 ];
 
 export default async function BlogPage({ params }: PageProps<"/[locale]/blog">) {

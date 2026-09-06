@@ -24,18 +24,19 @@ export function HeaderAccount() {
           <Link
             href={isAuthenticated ? ROUTES.dashboard : ROUTES.login}
             aria-label={t("title")}
-            className={cn(buttonVariants({ variant: "ghost", size: "icon" }), "relative")}
+            className="bg-white text-black hover:bg-orange-200 flex items-center gap-1.5 rounded-full px-3 py-1.5 text-[13px] font-medium transition-colors"
           />
         }
       >
-        <User className="size-5" aria-hidden="true" />
+        <User className="size-4" aria-hidden="true" />
+        <span className="hidden lg:inline">{t("title")}</span>
       </PopoverTrigger>
 
       <PopoverContent align="end" sideOffset={10} className="w-72 p-0">
         <div className="flex flex-col">
           <header className="bg-muted/40 flex items-center gap-3 border-b px-4 py-3">
             <div className="bg-secondary/15 text-secondary flex size-10 items-center justify-center rounded-full">
-              <User className="size-5" aria-hidden="true" />
+              <User className="size-4" aria-hidden="true" />
             </div>
             <div className="flex min-w-0 flex-col">
               {isAuthenticated && user ? (

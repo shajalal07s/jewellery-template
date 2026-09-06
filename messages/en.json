@@ -18,7 +18,7 @@
     "title": "AI Powered Search",
     "badge": "AI",
     "subtitle": "Smart search across every product in our catalog.",
-    "placeholder": "Search for kurti, panjabi, sharee...",
+    "placeholder": "Search for necklaces, rings, pendants...",
     "button": "Search",
     "popular": "Popular Searches",
     "thinking": "AI is thinking...",
@@ -26,12 +26,15 @@
     "noResults": "No matches found. Try a different keyword.",
     "note": "Powered by Fashion Store AI",
     "categories": [
-      "Kurti",
-      "Panjabi",
-      "Sharee",
-      "Salwar Kameez",
-      "Hijab",
-      "Lehenga"
+      "Necklace",
+      "Ring",
+      "Pendant",
+      "Bracelet",
+      "Earrings",
+      "Statement Ring",
+      "Bangle",
+      "Nose Pin",
+      "Jhumka"
     ]
   },
   "Wishlist": {
@@ -68,10 +71,10 @@
     "itemCount": "{count, plural, =1 {1 item} other {# items}}",
     "emptyTitle": "No items saved yet",
     "emptyDescription": "Products you save to your wishlist will appear here.",
-      "browseProducts": "Browse Products",
-      "remove": "Remove"
-    },
-    "Contact": {
+    "browseProducts": "Browse Products",
+    "remove": "Remove"
+  },
+  "Contact": {
     "title": "Contact Us",
     "subtitle": "We'd love to hear from you. Reach out and our team will get back to you soon.",
     "metaTitle": "Contact",
@@ -80,19 +83,40 @@
     "heroTitle": "Let's Start a Conversation",
     "heroSubtitle": "Questions, feedback, or partnership inquiries — our friendly team is always ready to assist you.",
     "info": {
-      "address": { "label": "Address", "value": "House 12, Road 5, Dhanmondi, Dhaka 1205, Bangladesh" },
-      "phone": { "label": "Phone", "value": "+880 1712-345678" },
-      "email": { "label": "Email", "value": "support@fashionstore.com.bd" },
-      "hours": { "label": "Working Hours", "value": "Sat – Thu, 9:00 AM – 9:00 PM" }
+      "address": {
+        "label": "Address",
+        "value": "House 12, Road 5, Dhanmondi, Dhaka 1205, Bangladesh"
+      },
+      "phone": {
+        "label": "Phone",
+        "value": "+880 1712-345678"
+      },
+      "email": {
+        "label": "Email",
+        "value": "support@fashionstore.com.bd"
+      },
+      "hours": {
+        "label": "Working Hours",
+        "value": "Sat – Thu, 9:00 AM – 9:00 PM"
+      }
     },
     "infoTitle": "Contact Information",
     "infoSubtitle": "Reach us through any channel below and we'll respond within 24 hours.",
     "faqTitle": "Frequently Asked Questions",
     "faqSubtitle": "Quick answers to the questions we hear most often.",
     "faqs": [
-      { "question": "How long does delivery take?", "answer": "Standard delivery takes 2-4 business days across Bangladesh. Express delivery reaches you within 24-48 hours in major cities." },
-      { "question": "What is your return policy?", "answer": "We offer a hassle-free 7-day return policy on all unworn items with tags intact. Returns are free and easy." },
-      { "question": "Which payment methods do you accept?", "answer": "We accept Cash on Delivery (COD), bKash, Nagad, Rocket, and all major credit/debit cards." }
+      {
+        "question": "How long does delivery take?",
+        "answer": "Standard delivery takes 2-4 business days across Bangladesh. Express delivery reaches you within 24-48 hours in major cities."
+      },
+      {
+        "question": "What is your return policy?",
+        "answer": "We offer a hassle-free 7-day return policy on all unworn items with tags intact. Returns are free and easy."
+      },
+      {
+        "question": "Which payment methods do you accept?",
+        "answer": "We accept Cash on Delivery (COD), bKash, Nagad, Rocket, and all major credit/debit cards."
+      }
     ],
     "formTitle": "Send us a message",
     "formSubtitle": "Fill in the form and our team will get back to you within 24 hours.",
@@ -190,7 +214,11 @@
     "invoice": "Invoice",
     "number": "Invoice No",
     "date": "Date",
-    "status": "Status",
+    "status": {
+      "processing": "Processing",
+      "shipped": "Shipped",
+      "delivered": "Delivered"
+    },
     "brandTagline": "Premium fashion store — quality clothing for everyone.",
     "brandAddress": "Level 4, Dhanmondi, Dhaka 1205, Bangladesh",
     "billedTo": "Billed To",
@@ -213,11 +241,6 @@
       "standard": "Standard Delivery",
       "express": "Express Delivery"
     },
-    "status": {
-      "processing": "Processing",
-      "shipped": "Shipped",
-      "delivered": "Delivered"
-    },
     "thankYouNote": "Thank you for shopping with Fashion Store!",
     "print": "Print Invoice",
     "backToShop": "Back to Shop",
@@ -237,77 +260,97 @@
       "about": "About",
       "blog": "Blog",
       "gallery": "Gallery",
-      "contact": "Contact"
+      "contact": "Contact",
+      "more": "More"
     },
     "categories": {
-      "women": "Women",
-      "men": "Men",
-      "kids": "Kids",
-      "accessories": "Accessories"
+      "necklace": "Necklace",
+      "bracelet": "Bracelet",
+      "ring": "Ring",
+      "earrings": "Earrings",
+      "pendant": "Pendant",
+      "bangle": "Bangle",
+      "nosepin": "Nose Pin",
+      "jhumka": "Jhumka"
     },
     "megaMenu": {
       "shopAll": "Shop All Products",
       "allCategories": "All Categories",
       "viewAll": "View all",
       "desc": {
-        "women": "Dresses, kurtis, sharees & more",
-        "men": "Panjabi, shirts & essentials",
-        "kids": "Fun & comfy fits for little ones",
-        "accessories": "Bags, watches, sunglasses & more"
+        "necklace": "Chains, pendants & statement layers",
+        "bracelet": "Bangles, cuffs & chain bracelets",
+        "ring": "Rings in gold, emerald & zirconia",
+        "earrings": "Studs, drops & sparkling pairs",
+        "pendant": "Focal pieces to treasure",
+        "bangle": "Nakshi & festive gold bangles",
+        "nosepin": "Pearl, kundan & bridal accents",
+        "jhumka": "Chandelier swings for celebrations"
       },
       "groups": {
-        "women": {
-          "kurtis": "Kurtis & Suits",
-          "sharees": "Sharees & Party Wear",
-          "dresses": "Dresses & Tunics"
+        "necklace": {
+          "gold": "Gold Necklaces",
+          "signature": "Signature Pieces"
         },
-        "men": {
-          "panjabi": "Panjabi",
-          "shirts": "Shirts & Tops",
-          "ethnic": "Ethnic & Home"
+        "bracelet": {
+          "bracelets": "Bracelets"
         },
-        "kids": {
-          "kurta": "Kurta Sets",
-          "wear": "Wear",
-          "footwear": "Footwear"
+        "ring": {
+          "rings": "Rings"
         },
-        "accessories": {
-          "bags": "Bags",
-          "watches": "Watches",
-          "eyewear": "Eyewear",
-          "personal": "Personal Accessories"
+        "earrings": {
+          "earrings": "Earrings"
+        },
+        "pendant": {
+          "pendants": "Pendants"
+        },
+        "bangle": {
+          "bangles": "Bangles"
+        },
+        "nosepin": {
+          "nosePins": "Nose Pins"
+        },
+        "jhumka": {
+          "jhumkas": "Jhumkas"
         }
       },
       "links": {
-        "floralCottonKurti": "Floral Cotton Kurti",
-        "salwarKameez": "Designer Salwar Kameez",
-        "printedLawnKurti": "Printed Lawn Kurti",
-        "chiffonPartyKurti": "Chiffon Party Kurti",
-        "muslinSharee": "Party Wear Muslin Sharee",
-        "silkOrganzaSharee": "Silk Organza Sharee",
-        "anarkaliGown": "Elegant Anarkali Gown",
-        "summerMaxiDress": "Summer Maxi Dress",
-        "tunicDress": "Tunic Dress",
-        "hijabCollection": "Hijab Collection",
-        "cottonPanjabi": "Classic Cotton Panjabi",
-        "jacquardPanjabi": "Jacquard Panjabi",
-        "poloShirt": "Premium Polo Shirt",
-        "cottonFatua": "Casual Cotton Fatua",
-        "denimJeans": "Slim Fit Denim Jeans",
-        "waistcoatSet": "Heritage Waistcoat Set",
-        "cottonLungi": "Cotton Lungi",
-        "towelFabric": "Turkish Towel Fabric Sets",
-        "kurtaPajama": "Kids Kurta Pajama Set",
-        "festiveKurta": "Kids Festive Kurta Set",
-        "printedTShirt": "Kids Printed T-Shirt",
-        "denimJacket": "Kids Denim Jacket",
-        "cottonPajama": "Kids Cotton Pajama",
-        "canvasSandals": "Kids Canvas Sandals",
-        "leatherBag": "Leather Messenger Bag",
-        "analogWatch": "Analog Wrist Watch",
-        "aviatorSunglasses": "Aviator Sunglasses",
-        "silkScarf": "Silk Scarf",
-        "leatherBelt": "Leather Belt"
+        "goldChainNecklace": "21K Gold Chain Necklace",
+        "goldCubicNecklace": "18K Gold Cubic Necklace",
+        "layeredGoldNecklace": "Layered Gold Necklace",
+        "pearlDiamondNecklace": "Pearl Diamond Necklace",
+        "goldCubicBracelet": "21K Gold Cubic Bracelet",
+        "goldBangle": "18K Gold Bangle",
+        "goldChainBracelet": "Gold Chain Bracelet",
+        "zirconiaStatementRing": "21K Zirconia Statement Ring",
+        "emeraldStatementRing": "Emerald Statement Ring",
+        "goldCoilRing": "Gold Coil Ring",
+        "goldTeardropEarrings": "Gold Teardrop Earrings",
+        "pearlStudEarrings": "Pearl Stud Earrings",
+        "cubicZirconiaEarrings": "Cubic Zirconia Earrings",
+        "goldSunburstPendant": "Gold Sunburst Pendant",
+        "goldDiamondPendant": "Gold Diamond Pendant",
+        "nakshiBangle": "22K Gold Nakshi Bangle",
+        "doubleBangleSet": "Gold Double Bangle Set",
+        "pearlNosePin": "Gold Nose Pin with Pearl",
+        "kundanNosePin": "Kundan Nose Pin",
+        "goldJhumka": "Gold Jhumka Earrings",
+        "chandbaliJhumka": "Chandbali Jhumka"
+      },
+      "elements": {
+        "all": "All",
+        "comingSoon": "Coming Soon",
+        "tabs": {
+          "necklace": "Necklaces",
+          "bracelet": "Bracelets",
+          "ring": "Rings",
+          "earrings": "Earrings",
+          "pendant": "Pendants",
+          "bangle": "Bangles",
+          "nosepin": "Nose Pins",
+          "jhumka": "Jhumkas"
+        },
+        "viewAll": "See All Jewellery"
       }
     },
     "mobile": {
@@ -329,6 +372,37 @@
       "searchPlaceholder": "Search products...",
       "searchDesc": "Search products",
       "noResults": "No products found."
+    },
+    "topbar": {
+      "dismiss": "Dismiss top announcement",
+      "shopNow": "Shop Now",
+      "announcements": [
+        {
+          "icon": "bolt",
+          "text": "The best-selling watch —all under $100.",
+          "linkText": "Shop Now"
+        },
+        {
+          "icon": "bolt",
+          "text": "The best-selling camera —all under $100.",
+          "linkText": "Shop Now"
+        },
+        {
+          "icon": "bolt",
+          "text": "The best-selling mobile —all under $100.",
+          "linkText": "Shop Now"
+        }
+      ]
+    },
+    "middle": {
+      "trackOrder": "Track Your Order",
+      "currency": "$ USD",
+      "searchPlaceholder": "Search for something...",
+      "searchCategory": "Search",
+      "allCategories": "All Categories",
+      "specialOffers": "Special Offers",
+      "recentViewed": "Recent Viewed",
+      "searchAria": "Search products"
     }
   },
   "Footer": {
@@ -345,14 +419,18 @@
     },
     "address": "House 12, Road 5, Dhanmondi, Dhaka 1205, Bangladesh",
     "phone": "+880 1712-345678",
-    "tagline": "Premium Bangladeshi fashion — ethnic wear, panjabi, kurtis, sharees and more, delivered across the country.",
+    "tagline": "Premium gold & diamond jewellery — necklaces, bracelets, rings, earrings and pendants, delivered across the country.",
     "email": "support@fashionstore.com.bd",
     "shopTitle": "Shop by Category",
     "shopLinks": {
-      "women": "Women",
-      "men": "Men",
-      "kids": "Kids",
-      "accessories": "Accessories"
+      "necklace": "Necklaces",
+      "bracelet": "Bracelets",
+      "ring": "Rings",
+      "earrings": "Earrings",
+      "pendant": "Pendants",
+      "bangle": "Bangles",
+      "nosepin": "Nose Pins",
+      "jhumka": "Jhumkas"
     },
     "customerTitle": "Quick Links",
     "newsletterTitle": "Join Our Newsletter",
@@ -360,7 +438,8 @@
     "newsletterPlaceholder": "Your email address",
     "newsletterSubscribe": "Subscribe",
     "payments": "We accept",
-    "newsletterSuccess": "Thanks for subscribing! Check your inbox soon."
+    "newsletterSuccess": "Thanks for subscribing! Check your inbox soon.",
+    "contactTitle": "Contact Us"
   },
   "Hero": {
     "sliderAria": "Featured promotions",
@@ -368,15 +447,47 @@
     "nextSlide": "Next slide",
     "goToSlide": "Go to slide {number}",
     "shopNow": "Shop Now",
+    "subtitle": "Exclusive Offer Going",
+    "titleTop": "Its a gift for",
+    "titleBottom": "someone very special.",
+    "startFrom": "Start From",
+    "prices": [
+      "$47.38",
+      "$52.84",
+      "$56.15"
+    ],
     "banners": [
       {
-        "alt": "Fashion Store new arrivals banner"
+        "alt": "eCommerce Ecommerce Product Banner Image"
       },
       {
-        "alt": "Fashion Store offer banner"
+        "alt": "eCommerce Ecommerce Product Banner Image"
       },
       {
-        "alt": "Fashion Store collection banner"
+        "alt": "eCommerce Ecommerce Product Banner Image"
+      }
+    ],
+    "categoriesTitleTop": "Popular By",
+    "categoriesTitleBold": "Categories",
+    "badge": "EXCLUSIVE",
+    "cardSubtitle": "New Arrivals",
+    "cardTitleTop": "Stylish",
+    "cardTitleBold": "& Trending",
+    "categories": [
+      {
+        "alt": "Jewellery necklace set category"
+      },
+      {
+        "alt": "Jewellery ring category"
+      },
+      {
+        "alt": "Jewellery earrings category"
+      },
+      {
+        "alt": "Jewellery bracelet category"
+      },
+      {
+        "alt": "Jewellery bridal collection category"
       }
     ]
   },
@@ -391,39 +502,39 @@
   },
   "Coupons": {
     "sectionHeading": "Coupons & Offers",
-    "sectionSubtitle": "Exclusive discounts across the whole family.",
+    "sectionSubtitle": "Exclusive discounts across fine gold & diamond jewellery.",
     "items": [
       {
-        "category": "Men",
+        "category": "Necklaces",
         "percent": "50%",
-        "title": "Men's Collection",
-        "description": "Flat 50% off panjabi, polo & denim for men.",
-        "code": "MEN50",
-        "cta": "Shop Men"
+        "title": "Necklace Collection",
+        "description": "Flat 50% off chain, pearl & layered necklaces.",
+        "code": "NECK50",
+        "cta": "Shop Necklaces"
       },
       {
-        "category": "Women",
+        "category": "Rings",
         "percent": "60%",
-        "title": "Women's Collection",
-        "description": "Flat 60% off sharee, kurti & maxi dresses.",
-        "code": "WOMEN60",
-        "cta": "Shop Women"
+        "title": "Ring Collection",
+        "description": "Flat 60% off zirconia, emerald & gold rings.",
+        "code": "RING60",
+        "cta": "Shop Rings"
       },
       {
-        "category": "Kids",
+        "category": "Bracelets",
         "percent": "50%",
-        "title": "Kids Collection",
-        "description": "Flat 50% off kids kurta sets & everyday wear.",
-        "code": "KID50",
-        "cta": "Shop Kids"
+        "title": "Bracelet Collection",
+        "description": "Flat 50% off bangles, cuffs & chain bracelets.",
+        "code": "BRAC50",
+        "cta": "Shop Bracelets"
       },
       {
-        "category": "Accessories",
+        "category": "Earrings",
         "percent": "40%",
-        "title": "Accessories Sale",
-        "description": "Flat 40% off bags, watches, sunglasses & more.",
-        "code": "ACC40",
-        "cta": "Shop Accessories"
+        "title": "Earrings & Pendants Sale",
+        "description": "Flat 40% off earrings, studs & pendant pieces.",
+        "code": "EAR40",
+        "cta": "Shop Earrings"
       }
     ]
   },
@@ -438,6 +549,8 @@
     "addedToCart": "Added",
     "addWishlist": "Add to wishlist",
     "removeWishlist": "Remove from wishlist",
+    "addToCompare": "Add To Compare",
+    "removeFromCompare": "Remove from Compare",
     "description": "Description",
     "backToShop": "Back to Shop",
     "notFoundTitle": "Product not found",
@@ -448,10 +561,14 @@
     "breadcrumbHome": "Home",
     "categorySubtitle": "Browse our curated {category} collection.",
     "categories": {
-      "women": "Women",
-      "men": "Men",
-      "kids": "Kids",
-      "accessories": "Accessories"
+      "necklace": "Necklaces",
+      "bracelet": "Bracelets",
+      "ring": "Rings",
+      "earrings": "Earrings",
+      "pendant": "Pendants",
+      "bangle": "Bangles",
+      "nosepin": "Nose Pins",
+      "jhumka": "Jhumkas"
     },
     "sku": "SKU",
     "items": "items",
@@ -462,10 +579,14 @@
     "qrHint": "Point your phone camera at the code to open this product instantly.",
     "price": "Price",
     "quantity": "Quantity",
+    "subtotal": "Subtotal",
     "decreaseQty": "Decrease quantity",
     "increaseQty": "Increase quantity",
     "buyNow": "Buy Now",
     "whatsapp": "WhatsApp",
+    "secureCheckout": "Secure Checkout",
+    "fastDelivery": "Fast Delivery Across Bangladesh",
+    "authenticGuarantee": "100% Authentic Gold Guarantee",
     "messenger": "Messenger",
     "deliveryInfo": "Delivery Information",
     "insideDhaka": "Inside Dhaka",
@@ -491,6 +612,110 @@
     "hoverToZoom": "Hover to zoom",
     "imageGallery": "gallery image",
     "browseProducts": "Browse Products"
+  },
+  "ShopPage": {
+    "home": "Home",
+    "title": "Shop",
+    "subtitle": "Explore fine gold, diamond and pearl jewellery handcrafted for every occasion.",
+    "promoBadge": "SALE · LIMITED TIME",
+    "promoTitle": "Buy One and Get 50% Off the Second Purchase Now",
+    "promoSubtitle": "Send us your idea, it may appear on our store.",
+    "viewDetails": "View Details",
+    "shopByCategory": "Shop by Category",
+    "filterRefine": "Filter & Refine",
+    "categoriesTitle": "Categories",
+    "categories": {
+      "necklace": "Necklace",
+      "bracelet": "Bracelet",
+      "ring": "Ring",
+      "earrings": "Earrings",
+      "pendant": "Pendant",
+      "bangle": "Bangle",
+      "nosepin": "Nose Pin",
+      "jhumka": "Jhumka"
+    },
+    "customerReviews": "Customer Reviews",
+    "andUp": "& Up",
+    "filterByPrice": "Filter by Price",
+    "under": "Under {value}",
+    "above": "{value} & Above",
+    "range": "{from} to {to}",
+    "minPrice": "Min price",
+    "maxPrice": "Max price",
+    "go": "Go",
+    "filterByColor": "Filter by Color",
+    "colors": {
+      "Gold": "Gold",
+      "Cream": "Cream",
+      "Rose": "Rose",
+      "Silver": "Silver",
+      "Bronze": "Bronze",
+      "Champagne": "Champagne",
+      "Beige": "Beige",
+      "Mustard": "Mustard",
+      "Green": "Green",
+      "Dark Green": "Dark Green",
+      "White": "White",
+      "Grey": "Grey",
+      "Light Grey": "Light Grey"
+    },
+    "brand": "Brand",
+    "promotionServices": "Promotion & Services",
+    "serviceFreeDelivery": "Free Delivery",
+    "serviceHotDeals": "Hot Deals",
+    "serviceAuthentic": "Authentic Brands",
+    "serviceCashOnDelivery": "Cash On Delivery",
+    "serviceInstallment": "Installment",
+    "sidebarBannerTitle": "Celebrate with Gold",
+    "sidebarBannerCta": "Explore Jewellery",
+    "featured": "Featured",
+    "bestSellers": "Best Sellers",
+    "topRated": "Top Rated",
+    "new": "New",
+    "topItems": "Top Items",
+    "showing": "Showing {from}–{to} of {count} results",
+    "sortBy": "Sort:",
+    "sortDefault": "Sort by (Default)",
+    "titleAsc": "Title Ascending",
+    "titleDesc": "Title Descending",
+    "priceAsc": "Price Ascending",
+    "priceDesc": "Price Descending",
+    "show": "Show:",
+    "items": "Items",
+    "viewToggle": "View mode",
+    "viewTwo": "Grid-two view",
+    "viewGrid": "Grid view",
+    "resultsCount": "{count} products found",
+    "reset": "Reset Filters",
+    "emptyTitle": "No products found",
+    "emptySubtitle": "Try adjusting or resetting the filters.",
+    "prev": "Prev",
+    "next": "Next",
+    "soldRecently": "{count}+ Sold Recently",
+    "freeShipping": "Free Shipping",
+    "returnDays": "{days} Days Return Policy",
+    "soldOut": "Sold Out",
+    "onlyLeft": "Only {count} items left",
+    "inStock": "{count} in Stock",
+    "addToCart": "Add To Cart",
+    "addWishlist": "Add to wishlist",
+    "removeWishlist": "Remove from wishlist",
+    "addToCompare": "Add To Compare",
+    "removeFromCompare": "Remove from Compare",
+    "addedToCompare": "Added To Compare",
+    "showMore": "Show More",
+    "showLess": "Show Less",
+    "ships": "Ships",
+    "pickup": "Pickup",
+    "checkAvailability": "Check Availability",
+    "specs": {
+      "brand": "Brand",
+      "material": "Material",
+      "stone": "Stone",
+      "style": "Style",
+      "hallmark": "Hallmark",
+      "weight": "Weight"
+    }
   },
   "Features": {
     "sectionHeading": "Why Shop With Us",
@@ -549,7 +774,7 @@
         "rating": 4
       },
       {
-        "quote": "The kurti set exceeded my expectations — beautiful colour and great stitching. Will order again soon.",
+        "quote": "The necklace exceeded my expectations — beautiful craftsmanship and a brilliant shine. Will order again soon.",
         "name": "Sharmin Sultana",
         "role": "Verified Customer, Comilla",
         "rating": 5
@@ -561,13 +786,13 @@
         "rating": 4
       },
       {
-        "quote": "My whole family shops here now. The kids' collection is adorable and the fit is spot on.",
+        "quote": "My whole family shops here now. The earrings set is adorable and the quality is spot on.",
         "name": "Sadia Afrin",
         "role": "Verified Customer, Rangpur",
         "rating": 5
       },
       {
-        "quote": "Premium materials you can actually feel. The sharee looked even better in person than online.",
+        "quote": "Premium gold you can actually feel. The bracelet looked even better in person than online.",
         "name": "Jannatul Ferdous",
         "role": "Verified Customer, Mymensingh",
         "rating": 5
@@ -676,20 +901,20 @@
         {
           "name": "Rafiq Mahmud",
           "role": "CTO",
-          "bio": "Tech leader building seamless shopping experiences. Makes fashion accessible with a tap."
+          "bio": "Tech leader building seamless shopping experiences. Makes fine jewellery accessible with a tap."
         }
       ]
     },
     "cta": {
-      "title": "Ready to Experience Premium Fashion?",
+      "title": "Ready to Experience Premium Jewellery?",
       "subtitle": "Join thousands of satisfied customers across Bangladesh. Shop with confidence — quality guaranteed.",
       "button": "Start Shopping"
     }
   },
   "Auth": {
     "brand": {
-      "tagline": "Discover the latest in fashion",
-      "description": "Shop trendy clothing, elegant sharees, panjabis and more — curated fresh styles delivered to your doorstep.",
+      "tagline": "Discover timeless gold & diamond jewellery",
+      "description": "Shop exquisite necklaces, bracelets, rings, earrings and pendants — carefully curated and delivered to your doorstep.",
       "points": {
         "shipping": "Fast & free delivery islandwide",
         "quality": "Premium quality fabrics",
@@ -818,97 +1043,113 @@
       "luxe": "Luxe"
     },
     "categories": {
-      "women": "Women",
-      "men": "Men",
-      "kids": "Kids",
-      "accessories": "Accessories"
+      "necklace": "Necklaces",
+      "bracelet": "Bracelets",
+      "ring": "Rings",
+      "earrings": "Earrings",
+      "pendant": "Pendants",
+      "bangle": "Bangles",
+      "nosepin": "Nose Pins",
+      "jhumka": "Jhumkas"
     }
   },
   "MenCollection": {
-    "title": "Men's Collection",
-    "subtitle": "Sharp, comfortable styles for him — panjabi, shirts and everyday essentials.",
+    "title": "Necklace Collection",
+    "subtitle": "Dazzling chain, pearl and layered necklaces — statement layers to treasure.",
     "seeMore": "See More"
   },
   "KidsCollection": {
-    "title": "Kids Collection",
-    "subtitle": "Playful and comfy fits for little ones — festive sets and everyday favourites.",
+    "title": "Earrings Collection",
+    "subtitle": "Sparkling studs, drops and matching pairs — elegant gold earrings for every occasion.",
     "seeMore": "See More"
   },
   "AccessoriesCollection": {
     "title": "Accessories Sale",
-    "subtitle": "Complete your look — bags, watches, sunglasses and more at great prices.",
+    "subtitle": "Complete your look — sparkling rings, bracelets and pendants at great prices.",
     "seeMore": "See More"
   },
   "Blog": {
-    "metaTitle": "Style Blog",
-    "metaDescription": "Fashion trends, style guides and stories from Fashion Store.",
-    "heroBadge": "Our Journal",
-    "heroTitle": "Fashion Stories & Style Guides",
-    "heroSubtitle": "Inspiration to help you dress better every day — curated trends, care tips and the stories behind our collections.",
+    "metaTitle": "Blog & Updates",
+    "metaDescription": "Read the latest news, styling tips and updates from Fashion Store.",
+    "heroBadge": "Blog",
+    "heroTitle": "Jewellery News & Style",
+    "heroSubtitle": "Stories, styling guides and behind-the-scenes from our fine jewellery world.",
     "featured": "Featured",
-    "readMore": "Read Article",
     "readTime": "{minutes} min read",
+    "subtitle": "Blog Posts",
+    "title": "News",
+    "titleBold": "& updates",
+    "viewAll": "View All Blogs",
+    "readMore": "Read More",
+    "newsletterTitle": "Never Miss a Sparkle",
+    "newsletterSubtitle": "Get new arrivals, styling tips and exclusive offers straight to your inbox.",
+    "newsletterPlaceholder": "Your email address",
+    "newsletterButton": "Subscribe",
     "posts": [
       {
-        "title": "5 Ways to Style a Printed Kurti for Every Occasion",
-        "excerpt": "From desk to dinner, learn how to mix and match your favorite printed kurtis with separates you already own.",
-        "category": "Style Guide",
-        "author": "Ayesha Rahman",
-        "date": "June 18, 2026"
-      },
-      {
-        "title": "The Ultimate Sharee Draping Guide for Beginners",
-        "excerpt": "Master the classic 6-yard drape with our step-by-step guide — no pins, no fuss, perfect fall every time.",
-        "category": "Heritage",
+        "title": "The Complete Guide to 21K Gold Jewellery",
+        "excerpt": "Learn what makes 21K gold special and how to choose the perfect piece for every occasion.",
+        "category": "Buying Guide",
         "author": "Nusrat Jahan",
-        "date": "June 10, 2026"
+        "date": "Sep 2, 2026"
       },
       {
-        "title": "How to Care for Panjabi & Sharp Fabrics",
-        "excerpt": "Keep your festive wear crisp and vibrant for years. Our simple care routine for premium cottons and jacquards.",
-        "category": "Care",
-        "author": "Karim Hassan",
-        "date": "May 28, 2026"
+        "title": "How to Layer Necklaces Like a Stylist",
+        "excerpt": "Mix chains, pearls and pendants effortlessly with our step-by-step layering tips.",
+        "category": "Styling",
+        "author": "Tahmina Akter",
+        "date": "Aug 28, 2026"
       },
       {
-        "title": "Color Palettes That Flatter Every Deshi Skin Tone",
-        "excerpt": "Discover the hues that make you glow — a tailored guide to mixing tradition with modern color science.",
-        "category": "Trends",
-        "author": "Ayesha Rahman",
-        "date": "May 15, 2026"
+        "title": "The Difference Between Pendant and Statement Rings",
+        "excerpt": "From dazzling zirconia to emerald statement rings — find the focal piece for your look.",
+        "category": "Style Guide",
+        "author": "Mahmudul Hasan",
+        "date": "Aug 20, 2026"
       },
       {
-        "title": "Kids Festive Wardrobe: Comfort Meets Celebration",
-        "excerpt": "Dressing little ones for Eid and puja without tears — breathable fabrics, easy fits, joyful colors.",
-        "category": "Family",
+        "title": "Caring for Your Gold Bracelets & Bangles",
+        "excerpt": "Simple cleaning and storage habits that keep your gold jewellery shining for years.",
+        "category": "Care Guide",
+        "author": "Sharmin Sultana",
+        "date": "Aug 12, 2026"
+      },
+      {
+        "title": "Earrings for Every Face Shape",
+        "excerpt": "Teardrops, studs and drops — discover which earring style flatters you most.",
+        "category": "Styling",
         "author": "Sadia Afrin",
-        "date": "May 02, 2026"
+        "date": "Aug 05, 2026"
       },
       {
-        "title": "Summer Essentials: Staying Cool in Dhaka's Heat",
-        "excerpt": "Lightweight cottons, airy cuts and moisture-wicking weaves to keep you fresh through the longest days.",
+        "title": "Pearl vs Zirconia: Choosing Brilliance",
+        "excerpt": "A friendly comparison to help you decide between classic pearls and brilliant zirconia.",
+        "category": "Buying Guide",
+        "author": "Imran Hossain",
+        "date": "Jul 29, 2026"
+      },
+      {
+        "title": "Pendants: Picking the Perfect Focal Point",
+        "excerpt": "Sunburst, diamond and chain styles — how to match a pendant to your necklace length.",
         "category": "Style Guide",
         "author": "Jannatul Ferdous",
-        "date": "April 20, 2026"
+        "date": "Jul 22, 2026"
       }
-    ],
-    "newsletterTitle": "Get Style Ideas in Your Inbox",
-    "newsletterSubtitle": "Join our community of 30,000+ readers. New drops, style guides and exclusive offers — twice a month, no spam.",
-    "newsletterPlaceholder": "your@email.com",
-    "newsletterButton": "Subscribe"
+    ]
   },
   "Gallery": {
     "metaTitle": "Lookbook Gallery",
     "metaDescription": "Browse our latest collection photos and get inspired.",
     "heroBadge": "Lookbook",
     "heroTitle": "The Fashion Store Lookbook",
-    "heroSubtitle": "A curated visual journey through our latest arrivals — styling ideas for women, men, kids and accessories.",
+    "heroSubtitle": "A curated visual journey through our latest jewellery arrivals — necklaces, bracelets, rings, earrings and pendants.",
     "filterAll": "All",
     "filters": {
-      "women": "Women",
-      "men": "Men",
-      "kids": "Kids",
-      "accessories": "Accessories"
+      "necklace": "Necklaces",
+      "bracelet": "Bracelets",
+      "ring": "Rings",
+      "earrings": "Earrings",
+      "pendant": "Pendants"
     },
     "results": "{count} looks",
     "viewProduct": "View Product",
@@ -1016,5 +1257,72 @@
         "body": "For privacy questions or requests, contact us at privacy@fashionstore.com.bd. We aim to respond to all privacy inquiries within 48 hours."
       }
     ]
+  },
+  "DiscoverProducts": {
+    "title": "Discover",
+    "titleBold": "Our Products"
+  },
+  "FeatureStrip": {
+    "items": [
+      {
+        "icon": "shipping",
+        "title": "Free Shipping",
+        "description": "From all orders over $100"
+      },
+      {
+        "icon": "support",
+        "title": "Quality Support",
+        "description": "24/7 online feedback"
+      },
+      {
+        "icon": "return",
+        "title": "Return & Refund",
+        "description": "Return money within 30 days"
+      },
+      {
+        "icon": "vendor",
+        "title": "Gift Voucher",
+        "description": "20% off when you shop online"
+      }
+    ]
+  },
+  "Promo": {
+    "shopNow": "Shop Now",
+    "items": [
+      {
+        "badge": "HURRY SALE 50%",
+        "titleBold": "Gold",
+        "title": "Jewelry",
+        "description": "Unlock timeless elegance with gold"
+      },
+      {
+        "badge": "SALE UPTO 70%",
+        "titleBold": "Diamond",
+        "title": "Jewelry",
+        "description": "Elevate your style with diamond"
+      },
+      {
+        "badge": "SALE UPTO 70%",
+        "titleBold": "Platinum",
+        "title": "Jewelry",
+        "description": "Celebrate moments with collections"
+      }
+    ]
+  },
+  "BestItems": {
+    "title": "Shop By",
+    "titleBold": "Best Items",
+    "subtitle": "Top Rated Items",
+    "shopNow": "Shop Now",
+    "tabs": [
+      "This Week",
+      "This Month",
+      "This Year",
+      "All Time"
+    ]
+  },
+  "Video": {
+    "label": "Video Images",
+    "play": "Play video"
   }
 }

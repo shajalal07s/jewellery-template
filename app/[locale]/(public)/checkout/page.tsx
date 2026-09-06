@@ -11,20 +11,26 @@ export default async function CheckoutPage({ params }: { params: Promise<{ local
   const t = await getTranslations("CheckoutPage");
 
   return (
-    <Container className="flex flex-col gap-8 py-16">
-      <Breadcrumb
-        items={[{ label: t("breadcrumbCart"), href: "/cart" }, { label: t("title") }]}
-      />
-      <h1 className="font-heading text-3xl font-semibold tracking-tight">{t("title")}</h1>
-
-      <div className="grid gap-8 lg:grid-cols-[1fr_400px]">
-        <CheckoutForm />
-        <div className="lg:order-last">
-          <Suspense fallback={null}>
-            <CheckoutSummaryClient />
-          </Suspense>
-        </div>
+    <>
+      <div className="bg-primary/15 border-y border-primary/20 py-[30px] backdrop-blur-[50px]">
+        <Container>
+          <Breadcrumb
+            items={[{ label: t("breadcrumbCart"), href: "/cart" }, { label: t("title") }]}
+          />
+        </Container>
       </div>
-    </Container>
+      <Container className="flex flex-col gap-8 py-[30px] lg:py-16">
+        <h1 className="font-heading text-3xl font-semibold tracking-tight">{t("title")}</h1>
+
+        <div className="grid gap-8 lg:grid-cols-[1fr_400px]">
+          <CheckoutForm />
+          <div className="lg:order-last">
+            <Suspense fallback={null}>
+              <CheckoutSummaryClient />
+            </Suspense>
+          </div>
+        </div>
+      </Container>
+    </>
   );
 }

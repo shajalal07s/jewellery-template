@@ -25,9 +25,9 @@ export function ProductGallery({ product }: ProductGalleryProps) {
   };
 
   return (
-    <div className="flex flex-col gap-3">
+    <div className="flex flex-col gap-3 md:flex-row-reverse">
       <div
-        className="relative aspect-square cursor-zoom-in overflow-hidden border bg-muted"
+        className="relative aspect-square flex-1 cursor-zoom-in overflow-hidden rounded-[16px] border bg-muted"
         onMouseEnter={() => setZoom(true)}
         onMouseLeave={() => setZoom(false)}
         onMouseMove={handleMouseMove}
@@ -62,7 +62,7 @@ export function ProductGallery({ product }: ProductGalleryProps) {
         </span>
       </div>
 
-      <div className="flex gap-3 overflow-x-auto pb-1">
+      <div className="flex gap-3 overflow-x-auto pb-1 md:w-24 md:flex-col md:overflow-x-visible md:pb-0">
         {images.map((src, index) => (
           <button
             key={index}
@@ -73,7 +73,7 @@ export function ProductGallery({ product }: ProductGalleryProps) {
             }}
             aria-label={`${product.name} ${t("imageGallery")} ${index + 1}`}
             className={cn(
-              "relative aspect-square w-20 shrink-0 overflow-hidden border bg-muted transition-colors",
+              "relative aspect-square w-20 shrink-0 overflow-hidden rounded-[16px] border bg-muted transition-colors md:w-full",
               index === activeIndex
                 ? "border-secondary ring-secondary/40 ring-2"
                 : "hover:border-primary"

@@ -7,19 +7,19 @@ import { Link } from "@/i18n/navigation";
 
 const COUPON_CONFIG = [
   {
-    image: "/images/men/men-1.jpg",
+    image: "/images/unimart/product-img/jwellery/jw-a-02.webp",
     fallback: "bg-gradient-to-br from-secondary via-[#ff962e] to-primary",
   },
   {
-    image: "/images/women/women-1.jpg",
+    image: "/images/unimart/product-img/jwellery/jw-a-03.webp",
     fallback: "bg-gradient-to-br from-primary via-[#ff962e] to-secondary",
   },
   {
-    image: "/images/kids/kids-1.jpg",
+    image: "/images/unimart/product-img/jwellery/jw-a-05.webp",
     fallback: "bg-gradient-to-br from-accent via-secondary to-[#ff962e]",
   },
   {
-    image: "/images/nargisus/nargisus-1.jpg",
+    image: "/images/unimart/product-img/jwellery/jw-a-06.webp",
     fallback: "bg-gradient-to-br from-[#ff962e] via-primary to-secondary",
   },
 ];

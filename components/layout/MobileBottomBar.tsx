@@ -22,38 +22,33 @@ export function MobileBottomBar() {
     <>
       <nav
         aria-label={t("label")}
-        className="bg-background/95 supports-[backdrop-filter]:bg-background/80 fixed inset-x-0 bottom-0 z-40 border-t backdrop-blur md:hidden"
+        className="fixed inset-x-0 bottom-0 z-40 px-[15px] pb-[15px] md:hidden"
       >
-        <div className="grid grid-cols-5 border-border">
-          <BarLink href="/" icon={Home} label={t("home")} />
+        <div className="bg-background/95 supports-[backdrop-filter]:bg-background/80 flex items-center justify-between gap-1 rounded-full border border-border px-[15px] py-2.5 shadow-lg backdrop-blur">
+          <BarIcon href="/" icon={Home} label={t("home")} />
           <button
             type="button"
             onClick={() => setSearchOpen(true)}
             aria-label={t("search")}
-            className="text-muted-foreground hover:text-secondary flex flex-col items-center gap-1 py-2.5 text-[11px] font-medium"
+            className="bg-muted/70 text-foreground hover:bg-muted flex size-10 items-center justify-center rounded-full transition-colors"
           >
             <Search className="size-5" aria-hidden="true" />
-            {t("search")}
           </button>
           <Link
             href="/cart"
             aria-label={t("cart")}
-            className="relative flex flex-col items-center gap-1 py-1.5 text-[11px] font-medium"
+            className="bg-secondary text-secondary-foreground hover:bg-secondary/90 relative flex size-11 items-center justify-center rounded-full shadow-sm transition-colors"
           >
-            <span className="bg-secondary text-secondary-foreground flex size-9 items-center justify-center rounded-full shadow-sm">
-              <ShoppingBag className="size-4" aria-hidden="true" />
-            </span>
+            <ShoppingBag className="size-5" aria-hidden="true" />
             {cartCount > 0 ? (
-              <span className="bg-destructive text-destructive-foreground absolute top-0 right-1/2 flex h-4 min-w-4 translate-x-[calc(-50%-1.25rem)] items-center justify-center rounded-full px-1 text-[9px] font-bold">
+              <span className="bg-destructive text-destructive-foreground absolute -top-0.5 -right-0.5 flex h-4 min-w-4 items-center justify-center rounded-full px-1 text-[9px] font-bold">
                 {cartCount}
               </span>
             ) : null}
-            <span className="text-muted-foreground">{t("cart")}</span>
           </Link>
-          <BarIconLink href="/wishlist" icon={Heart} label={t("wishlist")} count={wishlistCount} />
-          <BarLink href="/login" icon={User} label={t("profile")} />
+          <BarIcon href="/wishlist" icon={Heart} label={t("wishlist")} count={wishlistCount} />
+          <BarIcon href="/login" icon={User} label={t("profile")} />
         </div>
-        <div className="h-[env(safe-area-inset-bottom)]" aria-hidden="true" />
       </nav>
 
       <Dialog open={searchOpen} onOpenChange={setSearchOpen}>
@@ -65,27 +60,7 @@ export function MobileBottomBar() {
   );
 }
 
-function BarLink({
-  href,
-  icon: Icon,
-  label,
-}: {
-  href: string;
-  icon: typeof Home;
-  label: string;
-}) {
-  return (
-    <Link
-      href={href}
-      className="text-muted-foreground hover:text-secondary flex flex-col items-center gap-1 py-2.5 text-[11px] font-medium"
-    >
-      <Icon className="size-5" aria-hidden="true" />
-      {label}
-    </Link>
-  );
-}
-
-function BarIconLink({
+function BarIcon({
   href,
   icon: Icon,
   label,
@@ -94,23 +69,20 @@ function BarIconLink({
   href: string;
   icon: typeof Home;
   label: string;
-  count: number;
+  count?: number;
 }) {
   return (
     <Link
       href={href}
       aria-label={label}
-      className="text-muted-foreground hover:text-secondary relative flex flex-col items-center gap-1 py-2.5 text-[11px] font-medium"
+      className="bg-muted/70 text-foreground hover:bg-muted relative flex size-10 items-center justify-center rounded-full transition-colors"
     >
-      <span className="relative">
-        <Icon className="size-5" aria-hidden="true" />
-        {count > 0 ? (
-          <span className="bg-primary text-primary-foreground absolute -top-1.5 -right-1.5 flex size-4 items-center justify-center rounded-full text-[9px] font-bold">
-            {count}
-          </span>
-        ) : null}
-      </span>
-      {label}
+      <Icon className="size-5" aria-hidden="true" />
+      {count && count > 0 ? (
+        <span className="bg-primary text-primary-foreground absolute -top-0.5 -right-0.5 flex size-4 items-center justify-center rounded-full text-[9px] font-bold">
+          {count}
+        </span>
+      ) : null}
     </Link>
   );
 }

@@ -67,12 +67,14 @@ export function ProductActions({ product }: ProductActionsProps) {
           variant="outline"
           size="icon"
           onClick={() => toggleWishlist(product)}
+          suppressHydrationWarning
           aria-label={isInWishlist ? t("removeWishlist") : t("addWishlist")}
           className={cn(isInWishlist && "text-destructive")}
         >
           <Heart
             className="size-4"
             aria-hidden="true"
+            suppressHydrationWarning
             fill={isInWishlist ? "currentColor" : "none"}
           />
         </Button>

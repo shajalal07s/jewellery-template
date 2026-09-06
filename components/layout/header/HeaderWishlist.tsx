@@ -27,11 +27,12 @@ export function HeaderWishlist() {
           <Link
             href="/wishlist"
             aria-label={t("title")}
-            className={cn(buttonVariants({ variant: "ghost", size: "icon" }), "relative")}
+            className="bg-white text-black hover:bg-orange-200 flex items-center gap-1.5 rounded-full px-3 py-1.5 text-[13px] font-medium transition-colors"
           />
         }
       >
-        <Heart className="size-5" aria-hidden="true" />
+        <Heart className="size-4" aria-hidden="true" />
+        <span className="hidden lg:inline">{t("title")}</span>
         {items.length > 0 ? (
           <span className="bg-primary text-primary-foreground absolute -top-1 -right-1 flex size-4 items-center justify-center rounded-full text-[10px] font-medium">
             {items.length}

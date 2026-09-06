@@ -18,7 +18,7 @@ export function NewsletterForm() {
 
   if (subscribed) {
     return (
-      <p className="bg-secondary/20 border border-secondary/40 px-3 py-2.5 text-sm text-white">
+      <p className="bg-primary/10 border-primary/40 rounded-[5px] border px-3 py-2.5 text-sm text-secondary">
         {t("newsletterSuccess")}
       </p>
     );
@@ -31,12 +31,12 @@ export function NewsletterForm() {
         value={email}
         onChange={(e) => setEmail(e.target.value)}
         placeholder={t("newsletterPlaceholder")}
-        className="w-full bg-white/10 px-3 py-2.5 text-sm text-white placeholder:text-white/40 outline-none focus:ring-1 focus:ring-secondary"
+        className="border-primary/25 w-full rounded-[5px] border bg-white px-3 py-2.5 text-sm text-foreground outline-none placeholder:text-muted-foreground focus:ring-1 focus:ring-secondary"
       />
       <button
         type="submit"
         aria-label={t("newsletterSubscribe")}
-        className="bg-secondary hover:bg-secondary/90 flex shrink-0 items-center justify-center px-3.5 text-white transition-colors"
+        className="bg-secondary hover:bg-secondary/90 flex shrink-0 items-center justify-center rounded-[5px] px-3.5 text-white transition-colors"
       >
         <Send className="size-4" aria-hidden="true" />
       </button>

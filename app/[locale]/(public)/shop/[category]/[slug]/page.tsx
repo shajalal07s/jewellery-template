@@ -32,7 +32,7 @@ export default async function ProductPage({
 
   if (!product || product.category?.toLowerCase() !== category) notFound();
 
-  const qrValue = `${process.env.NEXT_PUBLIC_API_URL ?? ""}/products/${category}/${product.slug}`;
+  const qrValue = `${process.env.NEXT_PUBLIC_API_URL ?? ""}/shop/${category}/${product.slug}`;
 
   return (
     <>
@@ -52,13 +52,13 @@ export default async function ProductPage({
       <ProductPageClient productId={product.id} />
 
       <Container className="flex flex-col gap-10 py-10">
-        <div className="grid gap-10 lg:grid-cols-[1fr_0.85fr_360px] lg:items-start">
+        <div className="grid gap-5 lg:grid-cols-[1.15fr_0.7fr_360px] lg:gap-10 lg:items-start">
           <ProductGallery product={product} />
           <ProductInfo product={product} qrValue={qrValue} />
           <ProductPurchaseCard product={product} />
         </div>
 
-        <div className="border-border border-t pt-10">
+        <div className="pt-10">
           <ProductTabs product={product} />
         </div>
       </Container>

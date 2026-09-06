@@ -11,16 +11,19 @@ export interface CartItem {
 
 interface CartState {
   items: CartItem[];
+  _hydrated: boolean;
   addItem: (product: ProductListItem, quantity?: number) => void;
   removeItem: (productId: string) => void;
   updateQuantity: (productId: string, quantity: number) => void;
   clearCart: () => void;
+  _markHydrated: () => void;
 }
 
 export const useCartStore = create<CartState>()(
   persist(
     (set) => ({
       items: [],
+      _hydrated: false,
       addItem: (product, quantity = 1) =>
         set((state) => {
           const existing = state.items.find((item) => item.product.id === product.id);
@@ -49,10 +52,14 @@ export const useCartStore = create<CartState>()(
                 ),
         })),
       clearCart: () => set({ items: [] }),
+      _markHydrated: () => set({ _hydrated: true }),
     }),
     {
       name: "cart",
       skipHydration: true,
+      onRehydrateStorage: () => (state) => {
+        state?._markHydrated();
+      },
     }
   )
 );

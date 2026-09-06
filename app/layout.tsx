@@ -1,16 +1,16 @@
 import type { Metadata } from "next";
-import { Hind_Siliguri, Lato, Teachers } from "next/font/google";
+import { Cormorant_Garamond, Hind_Siliguri, Open_Sans } from "next/font/google";
 import { siteConfig } from "@/config/site";
 import "@/app/globals.css";
 
-const teachers = Teachers({
-  variable: "--font-teachers",
+const openSans = Open_Sans({
+  variable: "--font-open-sans",
   subsets: ["latin"],
 });
 
-const lato = Lato({
-  variable: "--font-heading-lato",
-  weight: ["400", "700", "900"],
+const cormorantGaramond = Cormorant_Garamond({
+  variable: "--font-cormorant-garamond",
+  weight: ["400", "500", "600", "700"],
   subsets: ["latin"],
 });
 
@@ -23,7 +23,7 @@ const hindSiliguri = Hind_Siliguri({
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html
-      className={`${teachers.variable} ${lato.variable} ${hindSiliguri.variable} h-full antialiased`}
+      className={`${openSans.variable} ${cormorantGaramond.variable} ${hindSiliguri.variable} h-full antialiased`}
     >
       <body className="flex min-h-full flex-col">{children}</body>
     </html>

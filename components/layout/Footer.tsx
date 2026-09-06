@@ -1,4 +1,5 @@
 import { getTranslations } from "next-intl/server";
+import Image from "next/image";
 import { Container } from "@/components/common/Container";
 import { Logo } from "@/components/common/Logo";
 import { NewsletterForm } from "@/components/layout/footer/NewsletterForm";
@@ -6,7 +7,16 @@ import { Link } from "@/i18n/navigation";
 import { Mail, MapPin, Phone } from "lucide-react";
 import type { SVGProps } from "react";
 
-const CATEGORY_SLUGS = ["women", "men", "kids", "accessories"] as const;
+const CATEGORY_SLUGS = [
+  "necklace",
+  "bracelet",
+  "ring",
+  "earrings",
+  "pendant",
+  "bangle",
+  "nosepin",
+  "jhumka",
+] as const;
 
 function FacebookIcon(props: SVGProps<SVGSVGElement>) {
   return (
@@ -52,28 +62,14 @@ export async function Footer() {
   const tCommon = await getTranslations("Common");
 
   return (
-    <footer className="bg-[#1a0d00]">
+    <footer className="border-primary/15 border-t bg-[#fbf7ef]">
       <Container className="padded flex flex-col gap-12 py-14">
-        <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-4">
+        <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-5">
           <div className="flex flex-col gap-4">
             <div className="flex items-center gap-2">
-              <Logo variant="light" />
+              <Logo />
             </div>
-            <p className="text-white/60 max-w-xs text-sm leading-relaxed">{t("tagline")}</p>
-            <ul className="flex flex-col gap-3 text-sm">
-              <li className="flex items-start gap-2.5 text-white/70">
-                <MapPin className="text-secondary mt-0.5 size-4 shrink-0" aria-hidden="true" />
-                <span>{t("address")}</span>
-              </li>
-              <li className="flex items-center gap-2.5 text-white/70">
-                <Phone className="text-secondary size-4 shrink-0" aria-hidden="true" />
-                <span>{t("phone")}</span>
-              </li>
-              <li className="flex items-center gap-2.5 text-white/70">
-                <Mail className="text-secondary size-4 shrink-0" aria-hidden="true" />
-                <span>{t("email")}</span>
-              </li>
-            </ul>
+            <p className="text-muted-foreground max-w-xs text-sm leading-relaxed">{t("tagline")}</p>
             <div className="mt-1 flex items-center gap-2.5">
               {SOCIALS.map(({ key, icon: Icon, href, label }) => (
                 <a
@@ -82,7 +78,7 @@ export async function Footer() {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={label}
-                  className="bg-white/10 hover:bg-secondary flex size-9 items-center justify-center rounded-sm text-white transition-colors hover:text-white"
+                  className="bg-primary/10 text-secondary hover:bg-primary flex size-9 items-center justify-center rounded-full transition-colors hover:text-white"
                 >
                   <Icon className="size-4" aria-hidden="true" />
                 </a>
@@ -91,15 +87,16 @@ export async function Footer() {
           </div>
 
           <div className="flex flex-col gap-4">
-            <h4 className="font-heading text-sm font-bold tracking-wider text-white uppercase">
+            <h4 className="font-heading text-black text-[22px] font-bold tracking-normal capitalize">
               {t("shopTitle")}
             </h4>
+            <span className="bg-primary/30 h-0.5 w-10 rounded-full" aria-hidden="true" />
             <ul className="flex flex-col gap-2.5 text-sm">
               {CATEGORY_SLUGS.map((slug) => (
                 <li key={slug}>
                   <Link
-                    href={`/products/${slug}`}
-                    className="text-white/60 hover:text-secondary transition-colors"
+                    href={`/shop/${slug}`}
+                    className="text-muted-foreground hover:text-secondary transition-colors"
                   >
                     {t(`shopLinks.${slug}`)}
                   </Link>
@@ -109,15 +106,16 @@ export async function Footer() {
           </div>
 
           <div className="flex flex-col gap-4">
-            <h4 className="font-heading text-sm font-bold tracking-wider text-white uppercase">
+            <h4 className="font-heading text-black text-[22px] font-bold tracking-normal capitalize">
               {t("customerTitle")}
             </h4>
+            <span className="bg-primary/30 h-0.5 w-10 rounded-full" aria-hidden="true" />
             <ul className="flex flex-col gap-2.5 text-sm">
               {["about", "products", "contact", "blog", "gallery", "terms", "privacy"].map((key) => (
                 <li key={key}>
                   <Link
                     href={`/${key}`}
-                    className="text-white/60 hover:text-secondary transition-colors"
+                    className="text-muted-foreground hover:text-secondary transition-colors"
                   >
                     {t(`nav.${key}`)}
                   </Link>
@@ -127,29 +125,67 @@ export async function Footer() {
           </div>
 
           <div className="flex flex-col gap-4">
-            <h4 className="font-heading text-sm font-bold tracking-wider text-white uppercase">
+            <h4 className="font-heading text-black text-[22px] font-bold tracking-normal capitalize">
+              {t("contactTitle")}
+            </h4>
+            <span className="bg-primary/30 h-0.5 w-10 rounded-full" aria-hidden="true" />
+            <ul className="flex flex-col gap-3 text-sm">
+              <li className="flex items-start gap-2.5 text-muted-foreground">
+                <MapPin className="text-secondary mt-0.5 size-4 shrink-0" aria-hidden="true" />
+                <span>{t("address")}</span>
+              </li>
+              <li className="flex items-center gap-2.5 text-muted-foreground">
+                <Phone className="text-secondary size-4 shrink-0" aria-hidden="true" />
+                <span>{t("phone")}</span>
+              </li>
+              <li className="flex items-center gap-2.5 text-muted-foreground">
+                <Mail className="text-secondary size-4 shrink-0" aria-hidden="true" />
+                <span>{t("email")}</span>
+              </li>
+            </ul>
+          </div>
+
+          <div className="flex flex-col gap-4">
+            <h4 className="font-heading text-black text-[22px] font-bold tracking-normal capitalize">
               {t("newsletterTitle")}
             </h4>
-            <p className="text-white/60 text-sm leading-relaxed">{t("newsletterDesc")}</p>
+            <span className="bg-primary/30 h-0.5 w-10 rounded-full" aria-hidden="true" />
+            <p className="text-muted-foreground text-sm leading-relaxed">{t("newsletterDesc")}</p>
             <NewsletterForm />
           </div>
         </div>
 
-        <div className="flex flex-col items-center justify-between gap-4 border-t border-white/10 pt-6 md:flex-row">
-          <p className="text-white/50 text-xs">
-            {t("rights", { year: new Date().getFullYear(), siteName: tCommon("siteName") })}
-          </p>
+        <div className="border-primary/15 flex flex-col items-center justify-between gap-4 border-t pt-6 md:flex-row">
+          <p className="text-muted-foreground text-xs">
+              {t("rights", { year: new Date().getFullYear(), siteName: tCommon("siteName") })} · Development &amp; Design By Sha Jalal
+            </p>
           <div className="flex items-center gap-2 text-xs">
-            <span className="text-white/50">{t("payments")}:</span>
+            <span className="text-muted-foreground">{t("payments")}:</span>
             <div className="flex flex-wrap items-center gap-2">
-              {["bKash", "Nagad", "Rocket", "Visa", "Mastercard", "COD"].map((p) => (
+              {[
+                { src: "/images/payments/bkash.svg", alt: "bKash", w: 64 },
+                { src: "/images/payments/nagad.png", alt: "Nagad", w: 76 },
+                { src: "/images/payments/rocket.svg", alt: "Rocket", w: 64 },
+                { src: "/images/payments/visa.svg", alt: "Visa", w: 56 },
+                { src: "/images/payments/mastercard.svg", alt: "Mastercard", w: 48 },
+              ].map((p) => (
                 <span
-                  key={p}
-                  className="bg-white/10 px-2.5 py-1 text-[10px] font-semibold tracking-wide text-white/70 uppercase"
+                  key={p.alt}
+                  className="bg-white border-primary/15 flex h-8 items-center justify-center rounded-[5px] border px-2.5"
                 >
-                  {p}
+                  <Image
+                    src={p.src}
+                    alt={p.alt}
+                    width={p.w}
+                    height={24}
+                    className="h-5 w-auto object-contain"
+                    unoptimized
+                  />
                 </span>
               ))}
+              <span className="bg-white border-primary/15 px-2.5 py-1 text-[10px] font-semibold tracking-wide text-secondary uppercase rounded-[5px] border">
+                COD
+              </span>
             </div>
           </div>
         </div>

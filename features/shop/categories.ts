@@ -1,19 +1,36 @@
-export const CATEGORY_SLUGS = ["women", "men", "kids", "accessories"] as const;
+export const CATEGORY_SLUGS = [
+  "necklace",
+  "bracelet",
+  "ring",
+  "earrings",
+  "pendant",
+  "bangle",
+  "nosepin",
+  "jhumka",
+] as const;
 
 export type CategorySlug = (typeof CATEGORY_SLUGS)[number];
 
 const CATEGORY_SLUG_TO_NAME: Record<CategorySlug, string> = {
-  women: "Women",
-  men: "Men",
-  kids: "Kids",
-  accessories: "Accessories",
+  necklace: "Necklace",
+  bracelet: "Bracelet",
+  ring: "Ring",
+  earrings: "Earrings",
+  pendant: "Pendant",
+  bangle: "Bangle",
+  nosepin: "Nose Pin",
+  jhumka: "Jhumka",
 };
 
 const CATEGORY_NAME_TO_SLUG: Record<string, CategorySlug | undefined> = {
-  Women: "women",
-  Men: "men",
-  Kids: "kids",
-  Accessories: "accessories",
+  Necklace: "necklace",
+  Bracelet: "bracelet",
+  Ring: "ring",
+  Earrings: "earrings",
+  Pendant: "pendant",
+  Bangle: "bangle",
+  "Nose Pin": "nosepin",
+  Jhumka: "jhumka",
 };
 
 export function categoryNameToSlug(category?: string): CategorySlug | undefined {
@@ -31,5 +48,5 @@ export function isCategorySlug(slug: string): slug is CategorySlug {
 
 export function productPath(category?: string, slug?: string): string {
   const catSlug = categoryNameToSlug(category);
-  return slug ? `/products/${catSlug ?? "all"}/${slug}` : `/shop`;
+  return slug ? `/shop/${catSlug ?? "all"}/${slug}` : `/shop`;
 }

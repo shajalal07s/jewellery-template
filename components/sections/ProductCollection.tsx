@@ -24,7 +24,7 @@ export async function ProductCollection({
   const t = await getTranslations(namespace);
 
   const firstCategory = categoryNameToSlug(products[0]?.category);
-  const seeMoreHref = firstCategory ? `/products/${firstCategory}` : "/shop";
+  const seeMoreHref = firstCategory ? `/shop/${firstCategory}` : "/shop";
 
   return (
     <section className={bgClass ?? ""}>

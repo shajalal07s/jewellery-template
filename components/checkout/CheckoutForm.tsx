@@ -6,7 +6,7 @@ import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
 import { useState, useTransition } from "react";
-import { ArrowRight, Loader2, ShieldCheck, Truck } from "lucide-react";
+import { MapPin, ShieldCheck, Truck, User, Wallet } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { CheckoutSectionHeader } from "@/components/checkout/CheckoutSectionHeader";
 import {
@@ -20,7 +20,6 @@ import {
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
-import { Button } from "@/components/ui/button";
 import {
   FREE_SHIPPING_THRESHOLD,
   generateOrderId,
@@ -30,6 +29,7 @@ import {
   type PaymentMethod,
 } from "@/store/order.store";
 import { useCartStore } from "@/store/cart.store";
+import { cn } from "@/lib/utils";
 
 const formSchema = z.object({
   fullName: z.string().min(2, "min"),
@@ -45,7 +45,6 @@ type FormValues = z.infer<typeof formSchema>;
 
 export function CheckoutForm() {
   const t = useTranslations("CheckoutPage");
-  const cart = useTranslations("CartPage");
   const format = useFormatter();
   const router = useRouter();
 
@@ -55,14 +54,13 @@ export function CheckoutForm() {
 
   const [payment, setPayment] = useState<PaymentMethod>("cod");
   const [shippingId, setShippingId] = useState("standard");
-  const [isPending, startTransition] = useTransition();
+  const [, startTransition] = useTransition();
 
   const subtotal = items.reduce((sum, item) => sum + item.product.price * item.quantity, 0);
   const standardFree = subtotal >= FREE_SHIPPING_THRESHOLD;
   const selectedShipping = SHIPPING_METHODS.find((s) => s.id === shippingId) ?? SHIPPING_METHODS[0];
   const shippingCost = shippingId === "standard" && standardFree ? 0 : selectedShipping.cost;
   const total = subtotal + shippingCost;
-
   const money = (value: number) => format.number(value, { style: "currency", currency: "BDT" });
 
   const form = useForm<FormValues>({
@@ -113,10 +111,10 @@ export function CheckoutForm() {
   }
 
   return (
-    <form onSubmit={form.handleSubmit(onSubmit)} className="flex flex-col gap-6">
+    <form id="checkout-form" onSubmit={form.handleSubmit(onSubmit)} className="flex flex-col gap-6">
       <Form {...form}>
-        <Card>
-          <CheckoutSectionHeader title={t("contactTitle")} description={t("contactDescription")} />
+        <Card className="border-primary/25 rounded-[10px] border bg-white pt-0">
+          <CheckoutSectionHeader title={t("contactTitle")} description={t("contactDescription")} icon={<User className="size-5" aria-hidden="true" />} />
           <CardContent className="grid gap-4 p-5 sm:grid-cols-2">
             <FormField
               control={form.control}
@@ -125,7 +123,7 @@ export function CheckoutForm() {
                 <FormItem className="sm:col-span-2">
                   <FormLabel>{t("fullName")}</FormLabel>
                   <FormControl>
-                    <Input placeholder="John Doe" {...field} />
+                    <Input placeholder="John Doe" className="h-11 rounded-[10px] bg-white" {...field} />
                   </FormControl>
                   <FormMessage />
                 </FormItem>
@@ -138,7 +136,7 @@ export function CheckoutForm() {
                 <FormItem>
                   <FormLabel>{t("email")}</FormLabel>
                   <FormControl>
-                    <Input type="email" placeholder="you@example.com" {...field} />
+                    <Input type="email" placeholder="you@example.com" className="h-11 rounded-[10px] bg-white" {...field} />
                   </FormControl>
                   <FormMessage />
                 </FormItem>
@@ -151,7 +149,7 @@ export function CheckoutForm() {
                 <FormItem>
                   <FormLabel>{t("phone")}</FormLabel>
                   <FormControl>
-                    <Input type="tel" placeholder="01XXXXXXXXX" {...field} />
+                    <Input type="tel" placeholder="01XXXXXXXXX" className="h-11 rounded-[10px] bg-white" {...field} />
                   </FormControl>
                   <FormMessage />
                 </FormItem>
@@ -160,8 +158,8 @@ export function CheckoutForm() {
           </CardContent>
         </Card>
 
-        <Card>
-          <CheckoutSectionHeader title={t("shippingTitle")} description={t("shippingDescription")} />
+        <Card className="border-primary/25 rounded-[10px] border bg-white pt-0">
+          <CheckoutSectionHeader title={t("shippingTitle")} description={t("shippingDescription")} icon={<MapPin className="size-5" aria-hidden="true" />} />
           <CardContent className="grid gap-4 p-5 sm:grid-cols-2">
             <FormField
               control={form.control}
@@ -170,7 +168,7 @@ export function CheckoutForm() {
                 <FormItem className="sm:col-span-2">
                   <FormLabel>{t("address")}</FormLabel>
                   <FormControl>
-                    <Textarea rows={3} placeholder={t("addressPlaceholder")} {...field} />
+                    <Textarea rows={3} placeholder={t("addressPlaceholder")} className="rounded-[10px] bg-white" {...field} />
                   </FormControl>
                   <FormMessage />
                 </FormItem>
@@ -183,7 +181,7 @@ export function CheckoutForm() {
                 <FormItem>
                   <FormLabel>{t("city")}</FormLabel>
                   <FormControl>
-                    <Input placeholder={t("cityPlaceholder")} {...field} />
+                    <Input placeholder={t("cityPlaceholder")} className="h-11 rounded-[10px] bg-white" {...field} />
                   </FormControl>
                   <FormMessage />
                 </FormItem>
@@ -196,7 +194,7 @@ export function CheckoutForm() {
                 <FormItem>
                   <FormLabel>{t("postalCode")}</FormLabel>
                   <FormControl>
-                    <Input placeholder="1212" {...field} />
+                    <Input placeholder="1212" className="h-11 rounded-[10px] bg-white" {...field} />
                   </FormControl>
                   <FormMessage />
                 </FormItem>
@@ -209,7 +207,7 @@ export function CheckoutForm() {
                 <FormItem className="sm:col-span-2">
                   <FormLabel>{t("notes")}</FormLabel>
                   <FormControl>
-                    <Textarea rows={2} placeholder={t("notesPlaceholder")} {...field} />
+                    <Textarea rows={2} placeholder={t("notesPlaceholder")} className="rounded-[10px] bg-white" {...field} />
                   </FormControl>
                   <FormMessage />
                 </FormItem>
@@ -218,8 +216,8 @@ export function CheckoutForm() {
           </CardContent>
         </Card>
 
-        <Card>
-          <CheckoutSectionHeader title={t("deliveryTitle")} />
+        <Card className="border-primary/25 rounded-[10px] border bg-white pt-0">
+          <CheckoutSectionHeader title={t("deliveryTitle")} icon={<Truck className="size-5" aria-hidden="true" />} />
           <CardContent className="p-5">
             <RadioGroup value={shippingId} onValueChange={setShippingId} className="grid gap-3 sm:grid-cols-2">
               {SHIPPING_METHODS.map((method) => {
@@ -227,7 +225,7 @@ export function CheckoutForm() {
                 return (
                   <label
                     key={method.id}
-                    className="flex cursor-pointer items-start gap-3 rounded-lg border p-4 has-data-[state=checked]:border-secondary has-data-[state=checked]:ring-1 has-data-[state=checked]:ring-secondary/40"
+                    className="flex cursor-pointer items-start gap-3 rounded-[12px] border bg-white p-4 transition-colors has-data-[state=checked]:border-secondary has-data-[state=checked]:ring-1 has-data-[state=checked]:ring-secondary/40"
                   >
                     <RadioGroupItem value={method.id} className="mt-0.5" />
                     <div className="flex flex-1 flex-col gap-0.5">
@@ -237,7 +235,7 @@ export function CheckoutForm() {
                       </span>
                       <span className="text-muted-foreground text-xs">{t(`eta.${method.id}`)}</span>
                     </div>
-                    <span className="text-sm font-semibold">
+                    <span className={cn("text-sm font-semibold", isFree && "text-secondary")}>
                       {isFree ? t("free") : money(method.cost)}
                     </span>
                   </label>
@@ -253,14 +251,14 @@ export function CheckoutForm() {
           </CardContent>
         </Card>
 
-        <Card>
-          <CheckoutSectionHeader title={t("paymentTitle")} />
+        <Card className="border-primary/25 rounded-[10px] border bg-white pt-0">
+          <CheckoutSectionHeader title={t("paymentTitle")} icon={<Wallet className="size-5" aria-hidden="true" />} />
           <CardContent className="p-5">
             <RadioGroup value={payment} onValueChange={(v) => setPayment(v as PaymentMethod)} className="grid gap-3 sm:grid-cols-2">
               {(["cod", "bkash"] as PaymentMethod[]).map((method) => (
                 <label
                   key={method}
-                  className="flex cursor-pointer items-start gap-3 rounded-lg border p-4 has-data-[state=checked]:border-secondary has-data-[state=checked]:ring-1 has-data-[state=checked]:ring-secondary/40"
+                  className="flex cursor-pointer items-start gap-3 rounded-[12px] border bg-white p-4 transition-colors has-data-[state=checked]:border-secondary has-data-[state=checked]:ring-1 has-data-[state=checked]:ring-secondary/40"
                 >
                   <RadioGroupItem value={method} className="mt-0.5" />
                   <div className="flex flex-col gap-0.5">
@@ -272,16 +270,6 @@ export function CheckoutForm() {
             </RadioGroup>
           </CardContent>
         </Card>
-
-        <Button type="submit" size="lg" className="w-full gap-2 py-6 text-base" disabled={isPending || items.length === 0}>
-          {isPending ? (
-            <Loader2 className="size-4 animate-spin" aria-hidden="true" />
-          ) : (
-            <ArrowRight className="size-4" aria-hidden="true" />
-          )}
-          {t("placeOrder", { total: money(total) })}
-        </Button>
-        <p className="text-muted-foreground -mt-2 text-center text-xs">{cart("secureCheckout")}</p>
       </Form>
     </form>
   );

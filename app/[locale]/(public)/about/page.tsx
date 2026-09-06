@@ -87,7 +87,7 @@ export default async function AboutPage({ params }: PageProps<"/[locale]/about">
 
             <div className="relative mx-auto aspect-[5/6] w-full max-w-xs overflow-hidden ring-1 ring-border md:max-w-none">
               <Image
-                src="/images/women/women-3.jpg"
+                src="/images/unimart/product-img/jwellery/jw-a-08.webp"
                 alt={t("mission.title")}
                 fill
                 sizes="(min-width: 768px) 33vw, 100vw"

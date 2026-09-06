@@ -10,7 +10,7 @@ export default async function PublicLayout({ children, params }: LayoutProps<"/[
   return (
     <>
       <Header />
-      <main className="flex flex-1 flex-col pb-14 md:pb-0">{children}</main>
+      <main className="flex flex-1 flex-col pb-24 md:pb-0">{children}</main>
       <Footer />
       <MobileBottomBar />
     </>

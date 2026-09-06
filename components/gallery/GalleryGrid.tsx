@@ -6,7 +6,7 @@ import { useState } from "react";
 import { Camera, Plus, ExternalLink } from "lucide-react";
 import { cn } from "@/lib/utils";
 
-type FilterKey = "all" | "women" | "men" | "kids" | "accessories";
+type FilterKey = "all" | "necklace" | "bracelet" | "ring" | "earrings" | "pendant";
 
 interface LookbookItem {
   key: string;
@@ -16,30 +16,30 @@ interface LookbookItem {
 }
 
 const LOOKBOOK: LookbookItem[] = [
-  { key: "women-1", src: "/images/women/women-1.jpg", filter: "women", tall: true },
-  { key: "men-1", src: "/images/men/men-1.jpg", filter: "men" },
-  { key: "women-2", src: "/images/women/women-2.jpg", filter: "women" },
-  { key: "kids-1", src: "/images/kids/kids-1.jpg", filter: "kids" },
-  { key: "women-3", src: "/images/women/women-3.jpg", filter: "women" },
-  { key: "men-2", src: "/images/men/men-2.jpg", filter: "men", tall: true },
-  { key: "kids-2", src: "/images/kids/kids-2.jpg", filter: "kids" },
-  { key: "women-4", src: "/images/women/women-4.jpg", filter: "women" },
-  { key: "men-3", src: "/images/men/men-3.jpg", filter: "men" },
-  { key: "women-5", src: "/images/women/women-5.jpg", filter: "women", tall: true },
-  { key: "kids-3", src: "/images/kids/kids-3.jpg", filter: "kids" },
-  { key: "men-4", src: "/images/men/men-4.jpg", filter: "men" },
-  { key: "women-6", src: "/images/women/women-6.jpg", filter: "women" },
-  { key: "kids-4", src: "/images/kids/kids-4.jpg", filter: "kids", tall: true },
-  { key: "men-5", src: "/images/men/men-5.jpg", filter: "men" },
-  { key: "women-7", src: "/images/women/women-7.jpg", filter: "women" },
-  { key: "kids-5", src: "/images/kids/kids-5.jpg", filter: "kids" },
-  { key: "men-6", src: "/images/men/men-6.jpg", filter: "men" },
-  { key: "women-8", src: "/images/women/women-8.jpg", filter: "women", tall: true },
-  { key: "kids-6", src: "/images/kids/kids-6.jpg", filter: "kids" },
-  { key: "men-7", src: "/images/men/men-7.jpg", filter: "men" },
-  { key: "women-9", src: "/images/women/women-9.jpg", filter: "women" },
-  { key: "kids-7", src: "/images/kids/kids-7.jpg", filter: "kids" },
-  { key: "women-10", src: "/images/women/women-10.jpg", filter: "women" },
+  { key: "necklace-1", src: "/images/unimart/product-img/jwellery/jw-a-03.webp", filter: "necklace", tall: true },
+  { key: "bracelet-1", src: "/images/unimart/product-img/jwellery/jw-a-02.webp", filter: "bracelet" },
+  { key: "necklace-2", src: "/images/unimart/product-img/jwellery/jw-a-04.webp", filter: "necklace" },
+  { key: "ring-1", src: "/images/unimart/product-img/jwellery/jw-a-01.webp", filter: "ring" },
+  { key: "necklace-3", src: "/images/unimart/product-img/jwellery/jw-a-08.webp", filter: "necklace" },
+  { key: "bracelet-2", src: "/images/unimart/product-img/jwellery/jw-a-07.webp", filter: "bracelet", tall: true },
+  { key: "earrings-1", src: "/images/unimart/product-img/jwellery/jw-a-06.webp", filter: "earrings" },
+  { key: "necklace-4", src: "/images/unimart/product-img/jwellery/jw-a-11.webp", filter: "necklace" },
+  { key: "ring-2", src: "/images/unimart/product-img/jwellery/jw-a-05.webp", filter: "ring" },
+  { key: "pendant-1", src: "/images/unimart/product-img/jwellery/jw-a-10.webp", filter: "pendant", tall: true },
+  { key: "earrings-2", src: "/images/unimart/product-img/jwellery/jw-a-09.webp", filter: "earrings" },
+  { key: "bracelet-3", src: "/images/unimart/product-img/jwellery/jw-a-12.webp", filter: "bracelet" },
+  { key: "pendant-2", src: "/images/unimart/product-img/jwellery/jw-a-12.webp", filter: "pendant" },
+  { key: "ring-3", src: "/images/unimart/product-img/jwellery/jw-a-01.webp", filter: "ring", tall: true },
+  { key: "necklace-5", src: "/images/unimart/product-img/jwellery/jw-a-10.webp", filter: "necklace" },
+  { key: "earrings-3", src: "/images/unimart/product-img/jwellery/jw-a-06.webp", filter: "earrings" },
+  { key: "bracelet-4", src: "/images/unimart/product-img/jwellery/jw-a-02.webp", filter: "bracelet" },
+  { key: "ring-4", src: "/images/unimart/product-img/jwellery/jw-a-05.webp", filter: "ring" },
+  { key: "necklace-6", src: "/images/unimart/product-img/jwellery/jw-a-04.webp", filter: "necklace", tall: true },
+  { key: "pendant-3", src: "/images/unimart/product-img/jwellery/jw-a-03.webp", filter: "pendant" },
+  { key: "earrings-4", src: "/images/unimart/product-img/jwellery/jw-a-09.webp", filter: "earrings" },
+  { key: "bracelet-5", src: "/images/unimart/product-img/jwellery/jw-a-07.webp", filter: "bracelet" },
+  { key: "pendant-4", src: "/images/unimart/product-img/jwellery/jw-a-08.webp", filter: "pendant" },
+  { key: "ring-5", src: "/images/unimart/product-img/jwellery/jw-a-11.webp", filter: "ring" },
 ];
 
 export function GalleryGrid() {
@@ -48,10 +48,11 @@ export function GalleryGrid() {
 
   const filters: { key: FilterKey; label: string }[] = [
     { key: "all", label: t("filterAll") },
-    { key: "women", label: t("filters.women") },
-    { key: "men", label: t("filters.men") },
-    { key: "kids", label: t("filters.kids") },
-    { key: "accessories", label: t("filters.accessories") },
+    { key: "necklace", label: t("filters.necklace") },
+    { key: "bracelet", label: t("filters.bracelet") },
+    { key: "ring", label: t("filters.ring") },
+    { key: "earrings", label: t("filters.earrings") },
+    { key: "pendant", label: t("filters.pendant") },
   ];
 
   const filtered =

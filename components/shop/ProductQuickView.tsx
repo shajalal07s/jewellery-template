@@ -103,12 +103,14 @@ export function ProductQuickView({ product }: ProductQuickViewProps) {
           </Button>
           <Button
             variant="ghost"
+            suppressHydrationWarning
             className={cn("gap-2", isInWishlist && "text-destructive")}
             onClick={() => toggleWishlist(product)}
           >
             <Heart
               className="size-4"
               aria-hidden="true"
+              suppressHydrationWarning
               fill={isInWishlist ? "currentColor" : "none"}
             />
             {isInWishlist ? t("removeWishlist") : t("addWishlist")}

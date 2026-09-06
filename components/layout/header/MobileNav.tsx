@@ -97,13 +97,13 @@ export function MobileNav({ onNavigate }: MobileNavProps) {
             aria-expanded={openCategories}
             className={cn(
               "flex items-center gap-3 rounded-xl px-3 py-3 text-[15px] font-medium transition-colors",
-              pathname.startsWith("/products")
+              pathname.startsWith("/shop")
                 ? "text-foreground bg-muted/70"
                 : "text-muted-foreground hover:bg-muted/60 hover:text-foreground"
             )}
           >
             <LayoutGrid
-              className={cn("size-5", pathname.startsWith("/products") ? "text-secondary" : "text-muted-foreground")}
+              className={cn("size-5", pathname.startsWith("/shop") ? "text-secondary" : "text-muted-foreground")}
               aria-hidden="true"
             />
             {t("nav.categories")}
@@ -138,7 +138,7 @@ export function MobileNav({ onNavigate }: MobileNavProps) {
                         const slug = link.href.split("/").pop() ?? "";
                         const product = productBySlug.get(slug);
                         const href = product
-                          ? `/products/${product.category.toLowerCase()}/${product.slug}`
+                          ? `/shop/${product.category.toLowerCase()}/${product.slug}`
                           : link.href;
                         return (
                           <Link

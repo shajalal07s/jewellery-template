@@ -51,7 +51,7 @@ export default async function NotFound() {
           {tCommon("backToHome")}
         </Link>
         <Link
-          href="/products"
+          href="/shop"
           className={cn(buttonVariants({ variant: "outline" }), "gap-2")}
         >
           {tShop("browseProducts")}

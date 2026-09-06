@@ -1,9 +1,13 @@
 import type { CategorySlug } from "@/features/shop/categories";
 import {
-  Baby,
-  Shirt,
-  User,
-  Watch,
+  Asterisk,
+  BellRing,
+  CircleDashed,
+  Crown,
+  Diamond,
+  Gem,
+  Sparkles,
+  Star,
   type LucideIcon,
 } from "lucide-react";
 
@@ -23,131 +27,139 @@ export interface MegaMenuCategory {
 
 export const MEGA_MENU_CATEGORIES: MegaMenuCategory[] = [
   {
-    slug: "women",
-    href: "/products/women",
-    icon: Shirt,
-    gradient: "from-pink-500 to-rose-500",
-    descKey: "megaMenu.desc.women",
+    slug: "necklace",
+    href: "/shop/necklace",
+    icon: Gem,
+    gradient: "from-amber-400 to-yellow-600",
+    descKey: "megaMenu.desc.necklace",
     groups: [
       {
-        labelKey: "megaMenu.groups.women.kurtis",
+        labelKey: "megaMenu.groups.necklace.gold",
         links: [
-          { labelKey: "megaMenu.links.floralCottonKurti", href: "/products/women/floral-cotton-kurti" },
-          { labelKey: "megaMenu.links.salwarKameez", href: "/products/women/designer-salwar-kameez" },
-          { labelKey: "megaMenu.links.printedLawnKurti", href: "/products/women/printed-lawn-kurti" },
-          { labelKey: "megaMenu.links.chiffonPartyKurti", href: "/products/women/chiffon-party-kurti" },
+          { labelKey: "megaMenu.links.goldChainNecklace", href: "/shop/necklace/21k-gold-chain-necklace" },
+          { labelKey: "megaMenu.links.goldCubicNecklace", href: "/shop/necklace/18k-gold-cubic-necklace" },
         ],
       },
       {
-        labelKey: "megaMenu.groups.women.sharees",
+        labelKey: "megaMenu.groups.necklace.signature",
         links: [
-          { labelKey: "megaMenu.links.muslinSharee", href: "/products/women/party-wear-muslin-sharee" },
-          { labelKey: "megaMenu.links.silkOrganzaSharee", href: "/products/women/silk-organza-sharee" },
-          { labelKey: "megaMenu.links.anarkaliGown", href: "/products/women/elegant-anarkali-gown" },
-        ],
-      },
-      {
-        labelKey: "megaMenu.groups.women.dresses",
-        links: [
-          { labelKey: "megaMenu.links.summerMaxiDress", href: "/products/women/summer-maxi-dress" },
-          { labelKey: "megaMenu.links.tunicDress", href: "/products/women/tunic-dress" },
-          { labelKey: "megaMenu.links.hijabCollection", href: "/products/women/premium-chiffon-hijab" },
+          { labelKey: "megaMenu.links.layeredGoldNecklace", href: "/shop/necklace/layered-gold-necklace" },
+          { labelKey: "megaMenu.links.pearlDiamondNecklace", href: "/shop/necklace/pearl-diamond-necklace" },
         ],
       },
     ],
   },
   {
-    slug: "men",
-    href: "/products/men",
-    icon: User,
-    gradient: "from-secondary to-primary",
-    descKey: "megaMenu.desc.men",
+    slug: "bracelet",
+    href: "/shop/bracelet",
+    icon: Crown,
+    gradient: "from-orange-400 to-amber-600",
+    descKey: "megaMenu.desc.bracelet",
     groups: [
       {
-        labelKey: "megaMenu.groups.men.panjabi",
+        labelKey: "megaMenu.groups.bracelet.bracelets",
         links: [
-          { labelKey: "megaMenu.links.cottonPanjabi", href: "/products/men/classic-cotton-panjabi" },
-          { labelKey: "megaMenu.links.jacquardPanjabi", href: "/products/men/jacquard-panjabi" },
-        ],
-      },
-      {
-        labelKey: "megaMenu.groups.men.shirts",
-        links: [
-          { labelKey: "megaMenu.links.poloShirt", href: "/products/men/premium-polo-shirt" },
-          { labelKey: "megaMenu.links.cottonFatua", href: "/products/men/casual-cotton-fatua" },
-          { labelKey: "megaMenu.links.denimJeans", href: "/products/men/slim-fit-denim-jeans" },
-        ],
-      },
-      {
-        labelKey: "megaMenu.groups.men.ethnic",
-        links: [
-          { labelKey: "megaMenu.links.waistcoatSet", href: "/products/men/heritage-waistcoat-set" },
-          { labelKey: "megaMenu.links.cottonLungi", href: "/products/men/cotton-lungi" },
-          { labelKey: "megaMenu.links.towelFabric", href: "/products/men/turkish-towel-fabric-sets" },
+          { labelKey: "megaMenu.links.goldCubicBracelet", href: "/shop/bracelet/21k-gold-cubic-bracelet" },
+          { labelKey: "megaMenu.links.goldBangle", href: "/shop/bracelet/18k-gold-bangle" },
+          { labelKey: "megaMenu.links.goldChainBracelet", href: "/shop/bracelet/gold-chain-bracelet" },
         ],
       },
     ],
   },
   {
-    slug: "kids",
-    href: "/products/kids",
-    icon: Baby,
-    gradient: "from-sky-500 to-cyan-500",
-    descKey: "megaMenu.desc.kids",
+    slug: "ring",
+    href: "/shop/ring",
+    icon: Diamond,
+    gradient: "from-yellow-500 to-orange-600",
+    descKey: "megaMenu.desc.ring",
     groups: [
       {
-        labelKey: "megaMenu.groups.kids.kurta",
+        labelKey: "megaMenu.groups.ring.rings",
         links: [
-          { labelKey: "megaMenu.links.kurtaPajama", href: "/products/kids/kids-kurta-pajama-set" },
-          { labelKey: "megaMenu.links.festiveKurta", href: "/products/kids/kids-festive-kurta-set" },
-        ],
-      },
-      {
-        labelKey: "megaMenu.groups.kids.wear",
-        links: [
-          { labelKey: "megaMenu.links.printedTShirt", href: "/products/kids/kids-printed-t-shirt" },
-          { labelKey: "megaMenu.links.denimJacket", href: "/products/kids/kids-denim-jacket" },
-          { labelKey: "megaMenu.links.cottonPajama", href: "/products/kids/kids-cotton-pajama" },
-        ],
-      },
-      {
-        labelKey: "megaMenu.groups.kids.footwear",
-        links: [
-          { labelKey: "megaMenu.links.canvasSandals", href: "/products/kids/kids-canvas-sandals" },
+          { labelKey: "megaMenu.links.zirconiaStatementRing", href: "/shop/ring/21k-zirconia-statement-ring" },
+          { labelKey: "megaMenu.links.emeraldStatementRing", href: "/shop/ring/emerald-statement-ring" },
+          { labelKey: "megaMenu.links.goldCoilRing", href: "/shop/ring/gold-coil-ring" },
         ],
       },
     ],
   },
   {
-    slug: "accessories",
-    href: "/products/accessories",
-    icon: Watch,
-    gradient: "from-amber-500 to-orange-500",
-    descKey: "megaMenu.desc.accessories",
+    slug: "earrings",
+    href: "/shop/earrings",
+    icon: Sparkles,
+    gradient: "from-amber-500 to-rose-500",
+    descKey: "megaMenu.desc.earrings",
     groups: [
       {
-        labelKey: "megaMenu.groups.accessories.bags",
+        labelKey: "megaMenu.groups.earrings.earrings",
         links: [
-          { labelKey: "megaMenu.links.leatherBag", href: "/products/accessories/leather-messenger-bag" },
+          { labelKey: "megaMenu.links.goldTeardropEarrings", href: "/shop/earrings/gold-teardrop-earrings" },
+          { labelKey: "megaMenu.links.pearlStudEarrings", href: "/shop/earrings/pearl-stud-earrings" },
+          { labelKey: "megaMenu.links.cubicZirconiaEarrings", href: "/shop/earrings/cubic-zirconia-earrings" },
         ],
       },
+    ],
+  },
+  {
+    slug: "pendant",
+    href: "/shop/pendant",
+    icon: Star,
+    gradient: "from-yellow-600 to-amber-700",
+    descKey: "megaMenu.desc.pendant",
+    groups: [
       {
-        labelKey: "megaMenu.groups.accessories.watches",
+        labelKey: "megaMenu.groups.pendant.pendants",
         links: [
-          { labelKey: "megaMenu.links.analogWatch", href: "/products/accessories/analog-wrist-watch" },
+          { labelKey: "megaMenu.links.goldSunburstPendant", href: "/shop/pendant/gold-sunburst-pendant" },
+          { labelKey: "megaMenu.links.goldDiamondPendant", href: "/shop/pendant/gold-diamond-pendant" },
         ],
       },
+    ],
+  },
+  {
+    slug: "bangle",
+    href: "/shop/bangle",
+    icon: CircleDashed,
+    gradient: "from-amber-300 to-yellow-600",
+    descKey: "megaMenu.desc.bangle",
+    groups: [
       {
-        labelKey: "megaMenu.groups.accessories.eyewear",
+        labelKey: "megaMenu.groups.bangle.bangles",
         links: [
-          { labelKey: "megaMenu.links.aviatorSunglasses", href: "/products/accessories/aviator-sunglasses" },
+          { labelKey: "megaMenu.links.nakshiBangle", href: "/shop/bangle/22k-gold-nakshi-bangle" },
+          { labelKey: "megaMenu.links.doubleBangleSet", href: "/shop/bangle/gold-double-bangle-set" },
         ],
       },
+    ],
+  },
+  {
+    slug: "nosepin",
+    href: "/shop/nosepin",
+    icon: Asterisk,
+    gradient: "from-rose-400 to-pink-600",
+    descKey: "megaMenu.desc.nosepin",
+    groups: [
       {
-        labelKey: "megaMenu.groups.accessories.personal",
+        labelKey: "megaMenu.groups.nosepin.nosePins",
         links: [
-          { labelKey: "megaMenu.links.silkScarf", href: "/products/accessories/silk-scarf" },
-          { labelKey: "megaMenu.links.leatherBelt", href: "/products/accessories/leather-belt" },
+          { labelKey: "megaMenu.links.pearlNosePin", href: "/shop/nosepin/gold-nose-pin-with-pearl" },
+          { labelKey: "megaMenu.links.kundanNosePin", href: "/shop/nosepin/kundan-nose-pin" },
+        ],
+      },
+    ],
+  },
+  {
+    slug: "jhumka",
+    href: "/shop/jhumka",
+    icon: BellRing,
+    gradient: "from-red-400 to-rose-600",
+    descKey: "megaMenu.desc.jhumka",
+    groups: [
+      {
+        labelKey: "megaMenu.groups.jhumka.jhumkas",
+        links: [
+          { labelKey: "megaMenu.links.goldJhumka", href: "/shop/jhumka/gold-jhumka-earrings" },
+          { labelKey: "megaMenu.links.chandbaliJhumka", href: "/shop/jhumka/chandbali-jhumka" },
         ],
       },
     ],
